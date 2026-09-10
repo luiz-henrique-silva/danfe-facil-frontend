@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
-  title: "Termos de Uso — DANFE Fácil",
-  description: "Termos e condições de uso do serviço DANFE Fácil.",
+  title: "Termos de Uso — UniDANFE",
+  description: "Termos e condições de uso do serviço UniDANFE.",
 };
 
 const SECTIONS = [
   {
     title: "1. Aceitação dos termos",
-    body: "Ao criar uma conta e utilizar o DANFE Fácil, você concorda com estes Termos de Uso. Se não concordar com qualquer parte deles, não utilize o serviço.",
+    body: "Ao criar uma conta e utilizar o UniDANFE, você concorda com estes Termos de Uso. Se não concordar com qualquer parte deles, não utilize o serviço.",
   },
   {
     title: "2. O serviço",
-    body: "O DANFE Fácil é um software como serviço (SaaS) que combina a etiqueta de envio e o DANFE Simplificado do Mercado Livre em uma única página PDF, otimizada para impressão térmica ou A4. O processamento é realizado automaticamente em nossos servidores.",
+    body: "O UniDANFE é um software como serviço (SaaS) que combina a etiqueta de envio e o DANFE Simplificado do Mercado Livre em uma única página PDF, otimizada para impressão térmica ou A4. O processamento é realizado automaticamente em nossos servidores.",
   },
   {
     title: "3. Conta e cadastro",
@@ -42,7 +42,7 @@ const SECTIONS = [
   },
   {
     title: "9. Propriedade intelectual",
-    body: "O software, o design e o conteúdo do site são de propriedade do DANFE Fácil. O PDF resultante do processamento é seu; documentos fiscais continuam sendo de responsabilidade do emitente.",
+    body: "O software, o design e o conteúdo do site são de propriedade do UniDANFE. O PDF resultante do processamento é seu; documentos fiscais continuam sendo de responsabilidade do emitente.",
   },
   {
     title: "10. Disponibilidade do serviço",
@@ -50,7 +50,7 @@ const SECTIONS = [
   },
   {
     title: "11. Limitação de responsabilidade",
-    body: "O DANFE Fácil é uma ferramenta de apoio à impressão. A conferência final dos dados fiscais é responsabilidade do usuário. Não nos responsabilizamos por multas, autuações ou perdas decorrentes de documentos fiscais inválidos ou de uso indevido.",
+    body: "O UniDANFE é uma ferramenta de apoio à impressão. A conferência final dos dados fiscais é responsabilidade do usuário. Não nos responsabilizamos por multas, autuações ou perdas decorrentes de documentos fiscais inválidos ou de uso indevido.",
   },
   {
     title: "12. Alterações nos termos",

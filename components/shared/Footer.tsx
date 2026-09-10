@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="w-7 h-7 rounded-md bg-[#22c55e] flex items-center justify-center text-sm">
             📄
           </div>
-          <span className="font-semibold">DANFE Fácil</span>
+          <span className="font-semibold">UniDANFE</span>
           <span className="text-sm text-[#666666]">© 2026 Todos os direitos reservados.</span>
         </div>
         <div className="flex gap-6 text-sm text-[#666666]">

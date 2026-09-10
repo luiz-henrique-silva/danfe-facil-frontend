@@ -4,7 +4,7 @@ import Footer from "@/components/shared/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "DANFE Fácil — Impressão Inteligente para Mercado Livre",
+  title: "UniDANFE — Impressão Inteligente para Mercado Livre",
   description:
     "Combine a etiqueta de envio e o DANFE Simplificado do Mercado Livre em uma única página. Pronto para imprimir em térmica ou A4, direto no navegador.",
 };
@@ -92,7 +92,7 @@ const PLANS = [
 
 const FAQS = [
   {
-    q: "O que é o DANFE Fácil?",
+    q: "O que é o UniDANFE?",
     a: "É uma ferramenta web que combina a etiqueta de envio e o DANFE Simplificado do Mercado Livre em uma única página, pronta para impressão em térmica ou A4.",
   },
   {
@@ -177,7 +177,7 @@ export default function HomePage() {
             <span className="text-gradient-accent">em uma única folha</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-[#a1a1a1]">
-            O DANFE Fácil une a etiqueta de envio e o DANFE Simplificado do
+            O UniDANFE une a etiqueta de envio e o DANFE Simplificado do
             Mercado Livre em uma página só, direto no navegador. Pronto para
             imprimir em térmica ou A4.
           </p>

@@ -83,7 +83,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
             <div className="w-8 h-8 rounded-lg bg-[#22c55e] flex items-center justify-center">
               📄
             </div>
-            <span className="font-bold">DANFE Fácil</span>
+            <span className="font-bold">UniDANFE</span>
           </Link>
         </div>
 

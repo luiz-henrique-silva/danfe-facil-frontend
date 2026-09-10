@@ -1,7 +1,7 @@
 import Perfil from "@/components/dashboard/Perfil";
 
 export const metadata = {
-  title: "Meu Perfil — DANFE Fácil",
+  title: "Meu Perfil — UniDANFE",
 };
 
 export default function PerfilPage() {

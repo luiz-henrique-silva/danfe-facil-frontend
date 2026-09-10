@@ -2,7 +2,7 @@ import ProcessPdf from "@/components/dashboard/ProcessPdf";
 import CheckoutBanner from "@/components/dashboard/CheckoutBanner";
 
 export const metadata = {
-  title: "Processar PDF — DANFE Fácil",
+  title: "Processar PDF — UniDANFE",
 };
 
 export default function DashboardPage() {

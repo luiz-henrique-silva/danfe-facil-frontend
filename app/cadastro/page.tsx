@@ -3,7 +3,7 @@ import AuthShell from "@/components/shared/AuthShell";
 import RegisterForm from "@/components/auth/RegisterForm";
 
 export const metadata: Metadata = {
-  title: "Criar conta — DANFE Fácil",
+  title: "Criar conta — UniDANFE",
 };
 
 export default function RegisterPage() {

@@ -3,8 +3,8 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade — DANFE Fácil",
-  description: "Como o DANFE Fácil coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
+  title: "Política de Privacidade — UniDANFE",
+  description: "Como o UniDANFE coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
 };
 
 const SECTIONS = [
@@ -54,7 +54,7 @@ const SECTIONS = [
   },
   {
     title: "12. Contato",
-    body: "Para exercer seus direitos ou tirar dúvidas sobre o tratamento de dados, fale conosco pelo email suporte@danfefacil.com.br. Atendemos em até 48 horas úteis.",
+    body: "Para exercer seus direitos ou tirar dúvidas sobre o tratamento de dados, fale conosco pelo email suporte@unidanfe.com.br. Atendemos em até 48 horas úteis.",
   },
 ];
 

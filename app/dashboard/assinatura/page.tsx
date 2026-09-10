@@ -1,7 +1,7 @@
 import Assinatura from "@/components/dashboard/Assinatura";
 
 export const metadata = {
-  title: "Assinatura — DANFE Fácil",
+  title: "Assinatura — UniDANFE",
 };
 
 export default function AssinaturaPage() {
