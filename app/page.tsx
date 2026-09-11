@@ -12,37 +12,75 @@ export const metadata: Metadata = {
 
 const FEATURES = [
   {
-    icon: "📦",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+        <line x1="12" y1="22.08" x2="12" y2="12" />
+      </svg>
+    ),
     title: "Processamento em Lote",
     desc: "Submeta vários PDFs de uma vez e processe todos em segundos. Ideal para quem envia muitos pacotes por dia.",
   },
   {
-    icon: "🖨️",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9" />
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+        <rect x="6" y="14" width="12" height="8" />
+      </svg>
+    ),
     title: "Térmica e A4",
     desc: "Gere páginas em 100x150mm (térmica), altura exata do conteúdo ou A4. Escolha a que funciona para você.",
   },
   {
-    icon: "🔒",
-    title: "Seguro e Confiável",
-    desc: "Seus PDFs são processados com composição vetorial — textos continuam textos, QR codes mantêm resolução.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <polyline points="9 11.5 11 13.5 15 9.5" />
+      </svg>
+    ),
+    title: "Anti-erro",
+    desc: "Validação automática da chave de acesso, número da NF e Pack ID a cada processamento. Se algo falhar, não entra na sua cota e você não paga por isso.",
   },
   {
-    icon: "✅",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+        <line x1="16" y1="8" x2="2" y2="22" />
+        <line x1="17.5" y1="15" x2="9" y2="15" />
+      </svg>
+    ),
     title: "Validação Automática",
-    desc: "A chave de acesso, número da NF e Pack ID são validados após cada processamento para garantir integridade.",
+    desc: "Chave de acesso, número da NF e Pack ID verificados após cada processamento para garantir integridade.",
   },
   {
-    icon: "⚡",
-    title: "Direto no Navegador",
-    desc: "Sem instalação. Acesse, envie o PDF, baixe o resultado. De qualquer computador, a qualquer hora.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="2 12 6 12 6 8 10 8 10 12 14 12 14 16 18 16 18 20" />
+      </svg>
+    ),
+    title: "Sem Instalação",
+    desc: "100% no navegador. Acesse, envie o PDF, baixe o resultado. De qualquer computador, a qualquer hora.",
   },
   {
-    icon: "🕓",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </svg>
+    ),
     title: "Controle de Histórico",
     desc: "Acompanhe todos os processamentos com data, hora, arquivo, tamanho e status. Reconsulte os últimos 50 para conferência e rastreio.",
   },
   {
-    icon: "💳",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="1" y="4" width="22" height="16" rx="2" />
+        <line x1="1" y1="10" x2="23" y2="10" />
+      </svg>
+    ),
     title: "Planos Simples",
     desc: "Comece grátis e faça upgrade quando precisar. Cartão de crédito com recorrência mensal ou PIX.",
   },

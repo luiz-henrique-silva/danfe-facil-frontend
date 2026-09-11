@@ -70,6 +70,10 @@ export default function LandingPlans() {
             Cartão de crédito com cobrança recorrente mensal ou PIX. Cancele
             quando quiser, em um clique.
           </p>
+          <p className="mt-2 text-sm text-[#22c55e] font-medium">
+            Anti-erro: se um processamento falhar, ele não entra na sua cota
+            e você não paga por ele.
+          </p>
         </div>
         <div className="mt-14 grid md:grid-cols-4 gap-6 items-stretch">
           {PLANS.map((plan) => (

@@ -131,6 +131,9 @@ export default function ProcessPdf() {
                   ? "Processamentos ilimitados neste mês"
                   : `${usage.processed_month} de ${usage.limit} processamentos neste mês`}
               </p>
+              <p className="text-[11px] text-[#22c55e] mt-1">
+                Erros de processamento não contam na cota.
+              </p>
             </div>
             {usage.plan === "free" && (
               <a
@@ -185,8 +188,11 @@ export default function ProcessPdf() {
             e.target.value = "";
           }}
         />
-        <div className="mx-auto w-14 h-14 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/40 flex items-center justify-center text-2xl">
-          📄
+        <div className="mx-auto w-14 h-14 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/40 flex items-center justify-center">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+          </svg>
         </div>
         <p className="mt-4 font-medium">
           {file ? file.name : "Arraste seu PDF aqui"}

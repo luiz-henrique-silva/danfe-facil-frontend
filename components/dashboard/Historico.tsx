@@ -64,7 +64,13 @@ export default function Historico() {
         </div>
       ) : items.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-[#d4d4d8] p-12 text-center">
-          <div className="text-3xl mb-3">🗂️</div>
+          <div className="mx-auto w-12 h-12 rounded-full bg-[#22c55e]/10 border border-[#22c55e]/40 flex items-center justify-center mb-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+              <line x1="16" y1="8" x2="2" y2="22" />
+              <line x1="17.5" y1="15" x2="9" y2="15" />
+            </svg>
+          </div>
           <p className="font-medium">Nenhum processamento ainda</p>
           <p className="mt-1 text-sm text-[#7d7d85]">
             Processe seu primeiro PDF na página inicial do dashboard.
@@ -86,7 +92,10 @@ export default function Historico() {
                 <tr key={item.id} className="border-b border-[#e4e4e7] last:border-0">
                   <td className="px-5 py-3 max-w-[280px] truncate">
                     <span className="inline-flex items-center gap-2">
-                      <span>📄</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#7d7d85] shrink-0">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                      </svg>
                       <span className="truncate">{item.filename}</span>
                     </span>
                   </td>

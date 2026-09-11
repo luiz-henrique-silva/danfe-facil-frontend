@@ -22,14 +22,17 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[#e4e4e7] transition-all ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[#e4e4e7] transition-all overflow-x-hidden ${
         scrolled ? "py-2.5" : "py-4"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-lg bg-[#22c55e] flex items-center justify-center text-lg">
-            📄
+          <div className="w-9 h-9 rounded-lg bg-[#22c55e] flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
           </div>
           <span className="font-bold text-lg">DANFE&nbsp;Fácil</span>
         </Link>
@@ -56,12 +59,12 @@ export default function Navbar() {
           <UserMenu />
           <button
             onClick={() => setMobileOpen((v) => !v)}
-            className="flex flex-col gap-1.5 p-2"
+            className="flex flex-col gap-1.5 p-1.5"
             aria-label="Menu"
           >
-            <span className="w-6 h-0.5 bg-[#0a0a0a]" />
-            <span className="w-6 h-0.5 bg-[#0a0a0a]" />
-            <span className="w-6 h-0.5 bg-[#0a0a0a]" />
+            <span className="w-5 h-0.5 bg-[#0a0a0a]" />
+            <span className="w-5 h-0.5 bg-[#0a0a0a]" />
+            <span className="w-5 h-0.5 bg-[#0a0a0a]" />
           </button>
         </div>
       </nav>
