@@ -7,7 +7,6 @@ import UserMenu from "./UserMenu";
 const NAV_LINKS = [
   { href: "/#como-funciona", label: "Como Funciona" },
   { href: "/#funcionalidades", label: "Funcionalidades" },
-  { href: "/#planos", label: "Planos" },
   { href: "/#faq", label: "FAQ" },
 ];
 
