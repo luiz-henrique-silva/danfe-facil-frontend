@@ -66,7 +66,14 @@ export async function proxyHandler(
   });
 
   backendRes.headers.forEach((value, key) => {
-    if (key.toLowerCase() === "set-cookie") return;
+    const lower = key.toLowerCase();
+    if (
+      lower === "set-cookie" ||
+      lower === "content-encoding" ||
+      lower === "content-length" ||
+      lower === "transfer-encoding"
+    )
+      return;
     response.headers.set(key, value);
   });
 
