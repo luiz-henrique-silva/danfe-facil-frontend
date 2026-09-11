@@ -40,7 +40,7 @@ const PLANS = [
   },
   {
     name: "Business",
-    price: "R$ 79",
+    price: "R$ 79,90",
     period: "/mês",
     description: "Para grandes volumes de envios.",
     features: ["Impressões ilimitadas", "Lote de PDFs", "Todas as configurações", "Suporte dedicado"],

@@ -44,7 +44,7 @@ const PLANS = [
   {
     id: "business",
     name: "Business",
-    price: "R$ 79",
+    price: "R$ 79,90",
     period: "/mês",
     desc: "Impressões ilimitadas, suporte dedicado, todos os recursos.",
     features: ["Impressões ilimitadas", "Lote de PDFs", "Suporte dedicado"],
