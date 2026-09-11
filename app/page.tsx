@@ -5,9 +5,9 @@ import { HeroCTA, BottomCTA } from "@/components/shared/LandingCTA";
 import LandingPlans from "@/components/shared/LandingPlans";
 
 export const metadata: Metadata = {
-  title: "UniDANFE — Impressão Inteligente para e-commerce",
+  title: "UniDANFE — Unificador de etiquetas e DANFE do e-commerce",
   description:
-    "Combine a etiqueta de envio e o DANFE Simplificado do e-commerce em uma única página. Pronto para imprimir em térmica ou A4, direto no navegador.",
+    "Combine a etiqueta de envio e o DANFE Simplificado do e-commerce em uma única página. Pronto para imprimir em térmica 100x150mm ou A4, direto no navegador.",
 };
 
 const FEATURES = [
@@ -89,8 +89,46 @@ const FAQS = [
 ];
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: "UniDANFE",
+        url: "https://danfepro.com.br",
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "UniDANFE",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        url: "https://danfepro.com.br",
+        description:
+          "Unificador de etiquetas e DANFE do e-commerce: combine etiqueta de envio e DANFE Simplificado em uma única página para imprimir em térmica 100x150mm ou A4.",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "BRL",
+          description: "Plano gratuito disponível",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: FAQS.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#ffffff]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* HERO */}
@@ -102,13 +140,14 @@ export default function HomePage() {
             100% online — sem instalação
           </span>
           <h1 className="mt-6 text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-            Imprima DANFE e etiqueta{" "}
+            Unifique etiqueta e DANFE{" "}
             <span className="text-gradient-accent">em uma única folha</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-[#71717a]">
-            O UniDANFE une a etiqueta de envio e o DANFE Simplificado do
-            e-commerce em uma página só, direto no navegador. Pronto para
-            imprimir em térmica ou A4.
+            O UniDANFE é o unificador de etiquetas e DANFE do e-commerce:
+            une a etiqueta de envio (Mercado Livre e outros) e o DANFE
+            Simplificado em uma página só, direto no navegador. Pronto para
+            imprimir em térmica 100x150mm ou A4.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <HeroCTA />
