@@ -110,7 +110,7 @@ export default function ProcessPdf() {
   const usedPercent = usage?.limit
     ? Math.round((usage.processed_month / usage.limit) * 100)
     : 0;
-  const isUnlimited = usage?.limit && usage.limit >= 100000;
+  const isUnlimited = usage?.unlimited || (usage?.limit && usage.limit >= 100000);
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
