@@ -20,7 +20,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Processamento em Lote",
-    desc: "Submeta vários PDFs de uma vez e processe todos em segundos. Ideal para quem envia muitos pacotes por dia.",
+    desc: "Junte várias etiquetas e DANFEs de uma vez e processe todos em segundos. Ideal para quem envia muitos pacotes por dia no Mercado Livre ou Shopee.",
   },
   {
     icon: (
@@ -122,6 +122,22 @@ const FAQS = [
     a: "Nos planos pagos você cadastra seu cartão de crédito ou paga via PIX. A fatura cai mensalmente no seu cartão de forma automática.",
   },
   {
+    q: "Funciona com etiquetas do Mercado Livre?",
+    a: "Sim. Envie o PDF da etiqueta do Mercado Livre e o UniDANFE une ela ao DANFE Simplificado em uma única página, pronta para impressão em térmica ou A4.",
+  },
+  {
+    q: "Funciona com etiquetas da Shopee?",
+    a: "Sim. O UniDANFE combina etiquetas de envio de e-commerce em geral — incluindo Shopee — com o DANFE em uma só folha, sem instalação.",
+  },
+  {
+    q: "Como juntar etiqueta e DANFE em uma única impressão?",
+    a: "Subimos o PDF da etiqueta do e-commerce e o sistema une as duas em uma página só. Você baixa um único arquivo e imprime tudo de uma vez.",
+  },
+  {
+    q: "Imprimo várias etiquetas em uma página?",
+    a: "Sim. O sistema suporta imprimir etiqueta + DANFE juntos e também combinar múltiplos envios, otimizando sua impressora térmica ou folha A4.",
+  },
+  {
     q: "Posso cancelar quando quiser?",
     a: "Sim. Você cancela em um clique na área de assinatura, direto no portal de pagamento, sem burocracia.",
   },
@@ -187,8 +203,8 @@ export default function HomePage() {
             <span className="text-gradient-accent">em uma única folha</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-[#71717a]">
-            O UniDANFE é o unificador de etiquetas e DANFE do e-commerce:
-            une a etiqueta de envio (Mercado Livre e outros) e o DANFE
+            O UniDANFE é o unificador de etiquetas do e-commerce: une a
+            etiqueta de envio (Mercado Livre, Shopee e outros) e o DANFE
             Simplificado em uma página só, direto no navegador. Pronto para
             imprimir em térmica 100x150mm ou A4.
           </p>
