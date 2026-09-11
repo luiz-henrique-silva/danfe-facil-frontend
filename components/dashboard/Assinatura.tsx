@@ -39,7 +39,7 @@ const PLANS = [
     period: "/mês",
     desc: "1.500 impressões/mês, lote de PDFs, suporte prioritário.",
     features: ["1.500 impressões/mês", "Lote de PDFs", "Térmica, auto e A4", "Suporte prioritário"],
-    badge: "PROMOÇÃO",
+    badge: "Recomendado",
   },
   {
     id: "business",

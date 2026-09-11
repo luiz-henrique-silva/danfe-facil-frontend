@@ -36,7 +36,7 @@ const PLANS = [
     href: "/cadastro",
     highlighted: true,
     trial: false,
-    badge: "PROMOÇÃO",
+    badge: "Recomendado",
   },
   {
     name: "Business",
