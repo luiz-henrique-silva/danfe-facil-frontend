@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import { HeroCTA, BottomCTA } from "@/components/shared/LandingCTA";
@@ -310,6 +311,38 @@ export default function HomePage() {
                 <p className="mt-3 text-sm text-[#71717a] leading-relaxed">{f.a}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GUIA: JUNTAR ETIQUETA E DANFE */}
+      <section className="px-6 py-10 bg-[#fafafa] border-b border-[#e4e4e7]">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="font-semibold">Junta etiqueta + DANFE em uma página só</p>
+            <p className="text-sm text-[#71717a] mt-1">
+              Veja o guia de unificação para cada plataforma.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 text-sm">
+            <Link
+              href="/unificador-de-etiquetas"
+              className="rounded-lg border border-[#d4d4d8] bg-white px-4 py-2 font-medium hover:border-[#22c55e] transition-colors"
+            >
+              Unificador de etiquetas
+            </Link>
+            <Link
+              href="/unificar-etiqueta-mercado-livre"
+              className="rounded-lg border border-[#d4d4d8] bg-white px-4 py-2 font-medium hover:border-[#22c55e] transition-colors"
+            >
+              Etiqueta Mercado Livre
+            </Link>
+            <Link
+              href="/unificar-etiqueta-shopee"
+              className="rounded-lg border border-[#d4d4d8] bg-white px-4 py-2 font-medium hover:border-[#22c55e] transition-colors"
+            >
+              Etiqueta Shopee
+            </Link>
           </div>
         </div>
       </section>
