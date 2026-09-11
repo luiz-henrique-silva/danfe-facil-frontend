@@ -16,8 +16,8 @@ const PLANS = [
     name: "Pro",
     price: "R$ 29",
     period: "/mês",
-    desc: "500 processamentos/mês, lote de PDFs, suporte prioritário.",
-    features: ["500 processamentos/mês", "Lote de PDFs", "Térmica, auto e A4"],
+    desc: "1.500 processamentos/mês, lote de PDFs, suporte prioritário.",
+    features: ["1.500 processamentos/mês", "Lote de PDFs", "Térmica, auto e A4"],
   },
   {
     id: "business",

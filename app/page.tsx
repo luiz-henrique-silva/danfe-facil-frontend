@@ -75,7 +75,7 @@ const PLANS = [
     price: "R$ 29",
     period: "/mês",
     description: "Para quem vende todo dia no Mercado Livre.",
-    features: ["500 processamentos/mês", "Lote de PDFs", "Térmica, auto e A4", "Cartão de crédito recorrente ou PIX", "Suporte prioritário"],
+    features: ["1.500 processamentos/mês", "Lote de PDFs", "Térmica, auto e A4", "Cartão de crédito recorrente ou PIX", "Suporte prioritário"],
     cta: "Assinar Pro",
     highlighted: true,
   },
