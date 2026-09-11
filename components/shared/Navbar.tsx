@@ -51,16 +51,19 @@ export default function Navbar() {
           <UserMenu />
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMobileOpen((v) => !v)}
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          aria-label="Menu"
-        >
-          <span className="w-6 h-0.5 bg-white" />
-          <span className="w-6 h-0.5 bg-white" />
-          <span className="w-6 h-0.5 bg-white" />
-        </button>
+        {/* Mobile: avatar da conta + hamburger */}
+        <div className="md:hidden flex items-center gap-1">
+          <UserMenu />
+          <button
+            onClick={() => setMobileOpen((v) => !v)}
+            className="flex flex-col gap-1.5 p-2"
+            aria-label="Menu"
+          >
+            <span className="w-6 h-0.5 bg-[#0a0a0a]" />
+            <span className="w-6 h-0.5 bg-[#0a0a0a]" />
+            <span className="w-6 h-0.5 bg-[#0a0a0a]" />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -76,9 +79,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="pt-2 border-t border-[#e4e4e7]">
-            <UserMenu />
-          </div>
         </div>
       )}
     </header>
