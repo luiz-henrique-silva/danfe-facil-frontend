@@ -139,14 +139,14 @@ export default function DashboardShell({ children }: { children: React.ReactNode
       )}
 
       {/* Main */}
-      <div className="flex-1 flex flex-col min-w-0">
-        <header className="flex items-center justify-between px-6 py-4 border-b border-[#e4e4e7] bg-white/80 backdrop-blur-xl">
+      <div className="flex-1 flex flex-col min-w-0 max-w-full overflow-x-hidden">
+        <header className="flex items-center justify-between px-4 md:px-6 py-2.5 border-b border-[#e4e4e7] bg-white/80 backdrop-blur-xl">
           <button
-            className="md:hidden"
+            className="md:hidden flex-shrink-0"
             onClick={() => setSidebarOpen(true)}
             aria-label="Abrir menu"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
               <line x1="3" y1="18" x2="21" y2="18" />
@@ -156,7 +156,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
             <UserMenu />
           </div>
         </header>
-        <main className="flex-1 p-6 md:p-8">{children}</main>
+        <main className="flex-1 p-4 md:p-8 w-full max-w-full">{children}</main>
       </div>
     </div>
   );
