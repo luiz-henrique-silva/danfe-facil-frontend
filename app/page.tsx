@@ -37,6 +37,11 @@ const FEATURES = [
     desc: "Sem instalação. Acesse, envie o PDF, baixe o resultado. De qualquer computador, a qualquer hora.",
   },
   {
+    icon: "🕓",
+    title: "Controle de Histórico",
+    desc: "Acompanhe todos os processamentos com data, hora, arquivo, tamanho e status. Reconsulte os últimos 50 para conferência e rastreio.",
+  },
+  {
     icon: "💳",
     title: "Planos Simples",
     desc: "Comece grátis e faça upgrade quando precisar. Cartão de crédito com recorrência mensal ou PIX.",
