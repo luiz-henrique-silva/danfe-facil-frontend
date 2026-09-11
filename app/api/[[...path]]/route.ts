@@ -70,7 +70,10 @@ export async function proxyHandler(
     response.headers.set(key, value);
   });
 
-  if (AUTH_PATHS.includes(pathname) && backendRes.ok) {
+  if (
+    (AUTH_PATHS.includes(pathname) || OAUTH_CALLBACK_PATHS.includes(pathname)) &&
+    backendRes.ok
+  ) {
     try {
       const contentType = backendRes.headers.get("content-type");
       if (contentType?.includes("application/json")) {
@@ -78,7 +81,7 @@ export async function proxyHandler(
         const json = JSON.parse(text) as TokenResponse;
         setAuthCookies(response, json);
 
-        if (OAUTH_CALLBACK_PATHS.includes(pathname)) {
+        if (json.access_token && OAUTH_CALLBACK_PATHS.includes(pathname)) {
           const redirect = new NextResponse(null, {
             status: 303,
             headers: { location: "/" },
