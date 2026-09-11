@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
@@ -14,7 +14,7 @@ const SECTIONS = [
   },
   {
     title: "2. O serviço",
-    body: "O UniDANFE é um software como serviço (SaaS) que combina a etiqueta de envio e o DANFE Simplificado do Mercado Livre em uma única página PDF, otimizada para impressão térmica ou A4. O processamento é realizado automaticamente em nossos servidores.",
+    body: "O UniDANFE é um software como serviço (SaaS) que combina a etiqueta de envio e o DANFE Simplificado do e-commerce em uma única página PDF, otimizada para impressão térmica ou A4. O processamento é realizado automaticamente em nossos servidores.",
   },
   {
     title: "3. Conta e cadastro",

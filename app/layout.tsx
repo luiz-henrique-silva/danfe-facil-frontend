@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "UniDANFE",
   description:
-    "Combine a etiqueta de envio e o DANFE Simplificado do Mercado Livre em uma única página.",
+    "Combine a etiqueta de envio e o DANFE Simplificado do e-commerce em uma única página.",
 };
 
 export default function RootLayout({

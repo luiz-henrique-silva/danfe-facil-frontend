@@ -24,25 +24,36 @@ interface PixState {
 
 const PLANS = [
   {
+    id: "basico",
+    name: "Básico",
+    price: "R$ 29,90",
+    period: "/mês",
+    desc: "800 impressões/mês, lote de PDFs.",
+    features: ["800 impressões/mês", "Lote de PDFs", "Térmica, auto e A4"],
+  },
+  {
     id: "pro",
     name: "Pro",
-    price: "R$ 29",
+    price: "R$ 49,90",
+    originalPrice: "R$ 59,90",
     period: "/mês",
-    desc: "1.500 processamentos/mês, lote de PDFs, suporte prioritário.",
-    features: ["1.500 processamentos/mês", "Lote de PDFs", "Térmica, auto e A4"],
+    desc: "1.500 impressões/mês, lote de PDFs, suporte prioritário.",
+    features: ["1.500 impressões/mês", "Lote de PDFs", "Térmica, auto e A4", "Suporte prioritário"],
+    badge: "PROMOÇÃO",
   },
   {
     id: "business",
     name: "Business",
     price: "R$ 79",
     period: "/mês",
-    desc: "Processamentos ilimitados, suporte dedicado, todos os recursos.",
-    features: ["Processamentos ilimitados", "Lote de PDFs", "Suporte dedicado"],
+    desc: "Impressões ilimitadas, suporte dedicado, todos os recursos.",
+    features: ["Impressões ilimitadas", "Lote de PDFs", "Suporte dedicado"],
   },
 ];
 
 const PLAN_NAMES: Record<string, string> = {
   free: "Grátis",
+  basico: "Básico",
   pro: "Pro",
   business: "Business",
 };
@@ -266,21 +277,31 @@ export default function Assinatura() {
       )}
 
       {/* Cartões de planos */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {PLANS.map((plan) => {
           const disabled =
             sub?.plan === plan.id && sub?.status === "active";
           return (
             <div
               key={plan.id}
-              className={`rounded-2xl border p-6 flex flex-col ${
+              className={`relative rounded-2xl border p-6 flex flex-col ${
                 sub?.plan === plan.id
                   ? "border-[#22c55e] bg-[#22c55e]/5"
                   : "border-[#e4e4e7] bg-[#ffffff]"
               }`}
             >
+              {plan.badge && (
+                <span className="absolute -top-3 right-4 px-3 py-1 rounded-full bg-[#22c55e] text-black text-xs font-bold">
+                  {plan.badge}
+                </span>
+              )}
               <h3 className="font-semibold text-lg">{plan.name}</h3>
-              <div className="flex items-baseline gap-1 mt-2">
+              <div className="flex items-baseline gap-2 mt-2">
+                {plan.originalPrice && (
+                  <span className="text-sm text-[#7d7d85] line-through">
+                    {plan.originalPrice}
+                  </span>
+                )}
                 <span className="text-3xl font-bold">{plan.price}</span>
                 <span className="text-sm text-[#71717a]">{plan.period}</span>
               </div>

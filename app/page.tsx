@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import { HeroCTA, BottomCTA } from "@/components/shared/LandingCTA";
+import LandingPlans from "@/components/shared/LandingPlans";
 
 export const metadata: Metadata = {
-  title: "UniDANFE — Impressão Inteligente para Mercado Livre",
+  title: "UniDANFE — Impressão Inteligente para e-commerce",
   description:
-    "Combine a etiqueta de envio e o DANFE Simplificado do Mercado Livre em uma única página. Pronto para imprimir em térmica ou A4, direto no navegador.",
+    "Combine a etiqueta de envio e o DANFE Simplificado do e-commerce em uma única página. Pronto para imprimir em térmica ou A4, direto no navegador.",
 };
 
 const FEATURES = [
@@ -51,7 +52,7 @@ const STEPS = [
   {
     num: "2",
     title: "Envie o PDF",
-    desc: "Suba o PDF da etiqueta do Mercado Livre com drag & drop.",
+    desc: "Suba o PDF da etiqueta do e-commerce com drag & drop.",
   },
   {
     num: "3",
@@ -63,7 +64,7 @@ const STEPS = [
 const FAQS = [
   {
     q: "O que é o UniDANFE?",
-    a: "É uma ferramenta web que combina a etiqueta de envio e o DANFE Simplificado do Mercado Livre em uma única página, pronta para impressão em térmica ou A4.",
+    a: "É uma ferramenta web que combina a etiqueta de envio e o DANFE Simplificado do e-commerce em uma única página, pronta para impressão em térmica ou A4.",
   },
   {
     q: "Preciso instalar algo?",
@@ -71,7 +72,7 @@ const FAQS = [
   },
   {
     q: "O sistema inventa dados fiscais?",
-    a: "Não. Nós apenas reorganizamos o que já existe no PDF gerado pelo Mercado Livre. Nenhum dado fiscal é criado ou alterado.",
+    a: "Não. Nós apenas reorganizamos o que já existe no PDF gerado pelo e-commerce. Nenhum dado fiscal é criado ou alterado.",
   },
   {
     q: "Como funciona a cobrança recorrente?",
@@ -106,7 +107,7 @@ export default function HomePage() {
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-[#71717a]">
             O UniDANFE une a etiqueta de envio e o DANFE Simplificado do
-            Mercado Livre em uma página só, direto no navegador. Pronto para
+            e-commerce em uma página só, direto no navegador. Pronto para
             imprimir em térmica ou A4.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -164,7 +165,7 @@ export default function HomePage() {
               Funcionalidades
             </span>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold">
-              Tudo que você precisa para vender no Mercado Livre
+              Tudo que você precisa para vender no e-commerce
             </h2>
           </div>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,6 +184,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* PLANOS (somente se nao estiver logado) */}
+      <LandingPlans />
 
       {/* FAQ */}
       <section id="faq" className="px-6 py-24">
