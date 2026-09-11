@@ -2,12 +2,24 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import PixModal from "./PixModal";
 
 interface SubscriptionStatus {
   plan: string;
   status: string;
   current_period_end: string | null;
   process_limit: number | null;
+}
+
+interface PixState {
+  open: boolean;
+  plan: string;
+  planName: string;
+  paymentId: string | null;
+  qrBase64: string | null;
+  qrCode: string | null;
+  error: string;
+  loading: boolean;
 }
 
 const PLANS = [
@@ -47,8 +59,19 @@ export default function Assinatura() {
   const [sub, setSub] = useState<SubscriptionStatus | null>(null);
   const [loading, setLoading] = useState(true);
   const [checkoutLoading, setCheckoutLoading] = useState<string | null>(null);
+  const [pixLoading, setPixLoading] = useState<string | null>(null);
   const [portalLoading, setPortalLoading] = useState(false);
   const [error, setError] = useState("");
+  const [pix, setPix] = useState<PixState>({
+    open: false,
+    plan: "",
+    planName: "",
+    paymentId: null,
+    qrBase64: null,
+    qrCode: null,
+    error: "",
+    loading: false,
+  });
 
   useEffect(() => {
     async function load() {
@@ -62,6 +85,79 @@ export default function Assinatura() {
     }
     load();
   }, []);
+
+  async function refreshStatus() {
+    try {
+      const res = await fetch("/api/subscription/status", { cache: "no-store" });
+      if (res.ok) setSub(await res.json());
+    } catch {
+    }
+  }
+
+  async function startPix(plan: string, planName: string) {
+    setError("");
+    setPixLoading(plan);
+    setPix((p) => ({
+      ...p,
+      open: true,
+      plan,
+      planName,
+      paymentId: null,
+      qrBase64: null,
+      qrCode: null,
+      error: "",
+      loading: true,
+    }));
+    try {
+      const res = await fetch("/api/pix/checkout", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ plan }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setPix((p) => ({ ...p, loading: false, error: data.detail || "Não foi possível gerar o PIX." }));
+        return;
+      }
+      setPix((p) => ({
+        ...p,
+        loading: false,
+        paymentId: data.payment_id,
+        qrBase64: data.qr_code_base64,
+        qrCode: data.qr_code,
+      }));
+    } catch {
+      setPix((p) => ({ ...p, loading: false, error: "Erro de conexão. Tente novamente." }));
+    } finally {
+      setPixLoading(null);
+    }
+  }
+
+  async function pollPix() {
+    if (!pix.open || !pix.paymentId) return;
+    try {
+      const res = await fetch(`/api/pix/checkout/${pix.paymentId}`, { cache: "no-store" });
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.status === "approved") {
+        setPix((p) => ({
+          ...p,
+          open: false,
+          paymentId: null,
+          qrBase64: null,
+          qrCode: null,
+        }));
+        await refreshStatus();
+      }
+    } catch {
+    }
+  }
+
+  useEffect(() => {
+    if (!pix.open || !pix.paymentId) return;
+    const interval = setInterval(pollPix, 5000);
+    return () => clearInterval(interval);
+  }, [pix.open, pix.paymentId]);
 
   async function startCheckout(plan: string) {
     setError("");
@@ -212,16 +308,38 @@ export default function Assinatura() {
                   ? "Abrindo pagamento..."
                   : `Assinar ${plan.name}`}
               </button>
+              <button
+                onClick={() => startPix(plan.id, plan.name)}
+                disabled={disabled || pixLoading === plan.id}
+                className="mt-2 w-full rounded-xl border border-[#22c55e] py-3 text-sm font-semibold text-[#22c55e] hover:bg-[#22c55e]/5 transition-colors disabled:opacity-60"
+              >
+                {disabled
+                  ? "Assinatura ativa"
+                  : pixLoading === plan.id
+                  ? "Gerando PIX..."
+                  : "Pagar com PIX"}
+              </button>
             </div>
           );
         })}
       </div>
 
       <p className="text-xs text-[#7d7d85] text-center">
-        Pagamento seguro via Stripe. Cartão de crédito com cobrança recorrente
-        mensal ou PIX. Você pode cancelar a qualquer momento no portal de
+        Cartão de crédito via Stripe com cobrança recorrente mensal, ou PIX via
+        Mercado Pago. Você pode cancelar a qualquer momento no portal de
         pagamento.
       </p>
+
+      <PixModal
+        open={pix.open}
+        planName={pix.planName}
+        qrBase64={pix.qrBase64}
+        qrCode={pix.qrCode}
+        paymentId={pix.paymentId}
+        error={pix.error}
+        loading={pix.loading}
+        onClose={() => setPix((p) => ({ ...p, open: false }))}
+      />
 
       <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-4 text-center">
         <Link href="/" className="text-sm text-[#71717a] hover:text-black">

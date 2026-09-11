@@ -5,7 +5,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 interface Usage {
   plan: string;
   processed_month: number;
-  limit: number;
+  limit: number | null;
+  unlimited?: boolean;
 }
 
 const PAGE_SIZES = [
