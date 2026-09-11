@@ -299,7 +299,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA FINAL */}
-      <section className="px-6 py-24 text-center">
+      <section className="px-6 py-24 text-center overflow-hidden">
         <div className="max-w-2xl mx-auto relative">
           <div className="absolute bottom-[-200px] left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-[#22c55e]/10 blur-[100px] pointer-events-none" />
           <h2 className="relative text-3xl md:text-5xl font-extrabold tracking-tight">
