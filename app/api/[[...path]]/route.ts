@@ -10,6 +10,7 @@ interface TokenResponse {
 }
 
 const AUTH_PATHS = ["auth/login", "auth/register", "auth/refresh"];
+const OAUTH_CALLBACK_PATHS = ["auth/google/callback"];
 
 function setAuthCookies(response: NextResponse, tokens: TokenResponse) {
   if (tokens.access_token) {
@@ -76,6 +77,32 @@ export async function proxyHandler(
         const text = new TextDecoder().decode(responseBody);
         const json = JSON.parse(text) as TokenResponse;
         setAuthCookies(response, json);
+
+        if (OAUTH_CALLBACK_PATHS.includes(pathname)) {
+          const redirect = new NextResponse(null, {
+            status: 303,
+            headers: { location: "/" },
+          });
+          if (json.access_token) {
+            redirect.cookies.set("df_access", json.access_token, {
+              httpOnly: true,
+              secure: process.env.NODE_ENV === "production",
+              sameSite: "lax",
+              path: "/",
+              maxAge: 30 * 60,
+            });
+          }
+          if (json.refresh_token) {
+            redirect.cookies.set("df_refresh", json.refresh_token, {
+              httpOnly: true,
+              secure: process.env.NODE_ENV === "production",
+              sameSite: "lax",
+              path: "/api",
+              maxAge: 7 * 24 * 60 * 60,
+            });
+          }
+          return redirect;
+        }
       }
     } catch {
       // não é JSON com tokens — apenas continua

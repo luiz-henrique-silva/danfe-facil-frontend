@@ -52,7 +52,7 @@ export default function ResetPasswordForm({ token }: { token: string }) {
           ✅
         </div>
         <h2 className="mt-4 text-xl font-semibold">Senha redefinida!</h2>
-        <p className="mt-2 text-sm text-[#a1a1a1]">
+        <p className="mt-2 text-sm text-[#71717a]">
           Sua senha foi alterada com sucesso. Já pode fazer login.
         </p>
         <Link
@@ -79,7 +79,7 @@ export default function ResetPasswordForm({ token }: { token: string }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Mínimo 8 caracteres"
-          className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm placeholder:text-[#666666] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+          className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm placeholder:text-[#7d7d85] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
         />
       </div>
 
@@ -95,7 +95,7 @@ export default function ResetPasswordForm({ token }: { token: string }) {
           value={confirm}
           onChange={(e) => setConfirm(e.target.value)}
           placeholder="Repita a senha"
-          className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm placeholder:text-[#666666] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+          className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm placeholder:text-[#7d7d85] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
         />
       </div>
 

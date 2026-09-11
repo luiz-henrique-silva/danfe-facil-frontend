@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
   --accent: #22c55e;
   --accent-dark: #16a34a;
-  --card: #1a1a1a;
-  --card-hover: #242424;
-  --border: #2a2a2a;
-  --muted: #a1a1a1;
+  --card: #f2f2f3;
+  --card-hover: #e8e8ea;
+  --border: #e4e4e7;
+  --muted: #71717a;
 }
 
 @theme inline {
@@ -38,14 +38,14 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #f2f2f3;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: #e4e4e7;
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3a;
+  background: #c8c8cc;
 }
 
 /* Utility: text gradient accent */

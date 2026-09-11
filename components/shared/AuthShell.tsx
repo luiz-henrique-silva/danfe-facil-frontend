@@ -10,7 +10,7 @@ export default function AuthShell({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0a0a0a] relative overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-[#ffffff] relative overflow-hidden">
       <div className="absolute top-[-250px] right-[-200px] w-[500px] h-[500px] rounded-full bg-[#22c55e]/8 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-250px] left-[-200px] w-[500px] h-[500px] rounded-full bg-[#22c55e]/8 blur-[120px] pointer-events-none" />
 
@@ -25,9 +25,9 @@ export default function AuthShell({
 
       <main className="relative z-10 flex-1 flex items-center justify-center px-6 pb-16">
         <div className="w-full max-w-md">
-          <div className="rounded-2xl border border-[#2a2a2a] bg-[#141414] p-8">
+          <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-8">
             <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="mt-1.5 mb-7 text-sm text-[#a1a1a1]">{subtitle}</p>
+            <p className="mt-1.5 mb-7 text-sm text-[#71717a]">{subtitle}</p>
             {children}
           </div>
         </div>

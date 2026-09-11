@@ -64,12 +64,12 @@ export default function PrivacidadePage() {
       <Navbar />
       <main className="flex-1 max-w-3xl mx-auto px-6 py-16 w-full">
         <h1 className="text-3xl font-bold mb-2">Política de Privacidade</h1>
-        <p className="text-sm text-[#666666] mb-10">Última atualização: setembro de 2026</p>
+        <p className="text-sm text-[#7d7d85] mb-10">Última atualização: setembro de 2026</p>
         <div className="space-y-8">
           {SECTIONS.map((s) => (
             <section key={s.title}>
               <h2 className="text-xl font-semibold mb-2">{s.title}</h2>
-              <p className="text-[#a1a1a1] leading-relaxed">{s.body}</p>
+              <p className="text-[#71717a] leading-relaxed">{s.body}</p>
             </section>
           ))}
         </div>

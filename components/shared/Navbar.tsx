@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-[#2a2a2a] transition-all ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-[#e4e4e7] transition-all ${
         scrolled ? "py-2.5" : "py-4"
       }`}
     >
@@ -41,7 +41,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-[#a1a1a1] hover:text-white transition-colors"
+              className="text-sm text-[#71717a] hover:text-black transition-colors"
             >
               {link.label}
             </Link>
@@ -66,18 +66,18 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-[#2a2a2a] bg-[#0a0a0a]/95 backdrop-blur-xl px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-[#e4e4e7] bg-white/95 backdrop-blur-xl px-6 py-4 flex flex-col gap-4">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-[#a1a1a1] hover:text-white"
+              className="text-sm text-[#71717a] hover:text-black"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
             </Link>
           ))}
-          <div className="pt-2 border-t border-[#2a2a2a]">
+          <div className="pt-2 border-t border-[#e4e4e7]">
             <UserMenu />
           </div>
         </div>

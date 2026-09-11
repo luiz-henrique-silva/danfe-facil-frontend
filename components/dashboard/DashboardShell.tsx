@@ -74,11 +74,11 @@ export default function DashboardShell({ children }: { children: React.ReactNode
     <div className="min-h-screen flex">
       {/* Sidebar */}
       <aside
-        className={`fixed md:static inset-y-0 left-0 z-40 w-64 bg-[#0e0e0e] border-r border-[#2a2a2a] flex flex-col transition-transform md:translate-x-0 ${
+        className={`fixed md:static inset-y-0 left-0 z-40 w-64 bg-[#ffffff] border-r border-[#e4e4e7] flex flex-col transition-transform md:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="px-5 py-6 border-b border-[#2a2a2a]">
+        <div className="px-5 py-6 border-b border-[#e4e4e7]">
           <Link href="/" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-[#22c55e] flex items-center justify-center">
               📄
@@ -98,7 +98,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors ${
                   active
                     ? "bg-[#22c55e]/10 text-[#22c55e] font-medium"
-                    : "text-[#a1a1a1] hover:bg-[#1a1a1a] hover:text-white"
+                    : "text-[#71717a] hover:bg-[#f2f2f3] hover:text-black"
                 }`}
               >
                 {item.icon}
@@ -108,10 +108,10 @@ export default function DashboardShell({ children }: { children: React.ReactNode
           })}
         </nav>
 
-        <div className="px-3 py-4 border-t border-[#2a2a2a]">
+        <div className="px-3 py-4 border-t border-[#e4e4e7]">
           <div className="px-3 pb-3">
             <p className="text-sm font-medium truncate">{user.name || "Usuário"}</p>
-            <p className="text-xs text-[#666666] truncate">{user.email}</p>
+            <p className="text-xs text-[#7d7d85] truncate">{user.email}</p>
           </div>
           <button
             onClick={async () => {
@@ -119,7 +119,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
               router.push("/");
               router.refresh();
             }}
-            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-red-400 hover:bg-[#1a1a1a] transition-colors"
+            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-red-400 hover:bg-[#f2f2f3] transition-colors"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
@@ -140,7 +140,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
 
       {/* Main */}
       <div className="flex-1 flex flex-col min-w-0">
-        <header className="flex items-center justify-between px-6 py-4 border-b border-[#2a2a2a] bg-[#0a0a0a]/80 backdrop-blur-xl">
+        <header className="flex items-center justify-between px-6 py-4 border-b border-[#e4e4e7] bg-white/80 backdrop-blur-xl">
           <button
             className="md:hidden"
             onClick={() => setSidebarOpen(true)}

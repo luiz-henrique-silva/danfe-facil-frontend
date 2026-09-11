@@ -19,7 +19,7 @@ export default async function ResetPasswordPage({
         title="Link inválido"
         subtitle="Este link não é válido ou expirou."
       >
-        <p className="text-sm text-[#a1a1a1]">
+        <p className="text-sm text-[#71717a]">
           Solicite um novo link de recuperação na página de{" "}
           <a href="/esqueci-senha" className="text-[#22c55e] hover:underline">
             esqueci minha senha

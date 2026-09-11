@@ -123,7 +123,7 @@ function PlanCard({ plan }: { plan: (typeof PLANS)[number] }) {
       className={`relative flex flex-col rounded-2xl border p-8 transition-all ${
         plan.highlighted
           ? "border-[#22c55e] bg-[#22c55e]/5 shadow-[0_0_40px_rgba(34,197,94,0.15)]"
-          : "border-[#2a2a2a] bg-[#161616] hover:border-[#3a3a3a]"
+          : "border-[#e4e4e7] bg-[#ffffff] hover:border-[#c8c8cc]"
       }`}
     >
       {plan.highlighted && (
@@ -134,12 +134,12 @@ function PlanCard({ plan }: { plan: (typeof PLANS)[number] }) {
       <h3 className="text-lg font-semibold">{plan.name}</h3>
       <div className="mt-3 flex items-baseline gap-1">
         <span className="text-4xl font-bold">{plan.price}</span>
-        <span className="text-sm text-[#a1a1a1]">{plan.period}</span>
+        <span className="text-sm text-[#71717a]">{plan.period}</span>
       </div>
-      <p className="mt-2 text-sm text-[#a1a1a1]">{plan.description}</p>
+      <p className="mt-2 text-sm text-[#71717a]">{plan.description}</p>
       <ul className="mt-6 space-y-3 flex-1">
         {plan.features.map((f) => (
-          <li key={f} className="flex items-start gap-2.5 text-sm text-[#a1a1a1]">
+          <li key={f} className="flex items-start gap-2.5 text-sm text-[#71717a]">
             <span className="text-[#22c55e] mt-0.5">✓</span>
             {f}
           </li>
@@ -150,7 +150,7 @@ function PlanCard({ plan }: { plan: (typeof PLANS)[number] }) {
         className={`mt-8 inline-flex items-center justify-center rounded-xl py-3 px-4 text-sm font-semibold transition-all ${
           plan.highlighted
             ? "bg-[#22c55e] text-black hover:bg-[#16a34a]"
-            : "bg-[#242424] text-white hover:bg-[#2e2e2e] border border-[#333333]"
+            : "bg-[#e8e8ea] text-black hover:bg-[#dcdcdf] border border-[#d4d4d8]"
         }`}
       >
         {plan.cta}
@@ -161,14 +161,14 @@ function PlanCard({ plan }: { plan: (typeof PLANS)[number] }) {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
+    <div className="min-h-screen bg-[#ffffff]">
       <Navbar />
 
       {/* HERO */}
       <section className="relative pt-36 pb-24 px-6 overflow-hidden">
         <div className="absolute top-[-300px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-[#22c55e]/10 blur-[120px] pointer-events-none" />
         <div className="relative max-w-4xl mx-auto text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#2a2a2a] bg-[#161616] text-sm text-[#a1a1a1]">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#e4e4e7] bg-[#ffffff] text-sm text-[#71717a]">
             <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
             100% online — sem instalação
           </span>
@@ -176,7 +176,7 @@ export default function HomePage() {
             Imprima DANFE e etiqueta{" "}
             <span className="text-gradient-accent">em uma única folha</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-[#a1a1a1]">
+          <p className="mx-auto mt-6 max-w-xl text-lg text-[#71717a]">
             O UniDANFE une a etiqueta de envio e o DANFE Simplificado do
             Mercado Livre em uma página só, direto no navegador. Pronto para
             imprimir em térmica ou A4.
@@ -190,12 +190,12 @@ export default function HomePage() {
             </Link>
             <a
               href="#como-funciona"
-              className="inline-flex items-center gap-2 rounded-xl border border-[#333333] bg-[#161616] px-8 py-4 text-base font-medium text-white hover:bg-[#242424] transition-colors"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#d4d4d8] bg-[#ffffff] px-8 py-4 text-base font-medium text-black hover:bg-[#e8e8ea] transition-colors"
             >
               Como funciona
             </a>
           </div>
-          <div className="mt-14 grid grid-cols-3 gap-6 max-w-lg mx-auto border-t border-[#2a2a2a] pt-8">
+          <div className="mt-14 grid grid-cols-3 gap-6 max-w-lg mx-auto border-t border-[#e4e4e7] pt-8">
             {[
               { num: "100%", label: "Online" },
               { num: "0", label: "Instalações" },
@@ -203,7 +203,7 @@ export default function HomePage() {
             ].map((s) => (
               <div key={s.label}>
                 <div className="text-2xl font-bold text-[#22c55e]">{s.num}</div>
-                <div className="text-sm text-[#666666]">{s.label}</div>
+                <div className="text-sm text-[#7d7d85]">{s.label}</div>
               </div>
             ))}
           </div>
@@ -211,14 +211,14 @@ export default function HomePage() {
       </section>
 
       {/* COMO FUNCIONA */}
-      <section id="como-funciona" className="px-6 py-24 bg-[#0e0e0e] border-y border-[#1f1f1f]">
+      <section id="como-funciona" className="px-6 py-24 bg-[#ffffff] border-y border-[#e4e4e7]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#22c55e]">
               Simples assim
             </span>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold">Como funciona</h2>
-            <p className="mt-3 text-[#a1a1a1]">
+            <p className="mt-3 text-[#71717a]">
               Três passos e seu pedido está pronto para imprimir.
             </p>
           </div>
@@ -226,13 +226,13 @@ export default function HomePage() {
             {STEPS.map((step, i) => (
               <div
                 key={step.title}
-                className="rounded-2xl border border-[#2a2a2a] bg-[#161616] p-8 text-center hover:border-[#22c55e] transition-colors"
+                className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-8 text-center hover:border-[#22c55e] transition-colors"
               >
                 <div className="mx-auto w-12 h-12 rounded-xl border border-[#22c55e] bg-[#22c55e]/10 text-[#22c55e] font-bold flex items-center justify-center">
                   {step.num}
                 </div>
                 <h3 className="mt-5 font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm text-[#a1a1a1]">{step.desc}</p>
+                <p className="mt-2 text-sm text-[#71717a]">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -254,13 +254,13 @@ export default function HomePage() {
             {FEATURES.map((f) => (
               <div
                 key={f.title}
-                className="rounded-2xl border border-[#2a2a2a] bg-[#161616] p-7 hover:border-[#3a3a3a] hover:bg-[#1a1a1a] transition-all"
+                className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-7 hover:border-[#c8c8cc] hover:bg-[#f2f2f3] transition-all"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#22c55e]/10 flex items-center justify-center text-2xl">
                   {f.icon}
                 </div>
                 <h3 className="mt-5 font-semibold">{f.title}</h3>
-                <p className="mt-2 text-sm text-[#a1a1a1] leading-relaxed">{f.desc}</p>
+                <p className="mt-2 text-sm text-[#71717a] leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -268,7 +268,7 @@ export default function HomePage() {
       </section>
 
       {/* PLANOS */}
-      <section id="planos" className="px-6 py-24 bg-[#0e0e0e] border-y border-[#1f1f1f]">
+      <section id="planos" className="px-6 py-24 bg-[#ffffff] border-y border-[#e4e4e7]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#22c55e]">
@@ -277,7 +277,7 @@ export default function HomePage() {
             <h2 className="mt-2 text-3xl md:text-4xl font-bold">
               Comece grátis, escolha quando crescer
             </h2>
-            <p className="mt-3 text-[#a1a1a1]">
+            <p className="mt-3 text-[#71717a]">
               Cartão de crédito com cobrança recorrente mensal ou PIX. Cancele
               quando quiser, em um clique.
             </p>
@@ -303,7 +303,7 @@ export default function HomePage() {
             {FAQS.map((f) => (
               <details
                 key={f.q}
-                className="group rounded-xl border border-[#2a2a2a] bg-[#161616] px-6 py-4"
+                className="group rounded-xl border border-[#e4e4e7] bg-[#ffffff] px-6 py-4"
               >
                 <summary className="flex items-center justify-between cursor-pointer list-none font-medium">
                   {f.q}
@@ -311,7 +311,7 @@ export default function HomePage() {
                     +
                   </span>
                 </summary>
-                <p className="mt-3 text-sm text-[#a1a1a1] leading-relaxed">{f.a}</p>
+                <p className="mt-3 text-sm text-[#71717a] leading-relaxed">{f.a}</p>
               </details>
             ))}
           </div>
@@ -325,7 +325,7 @@ export default function HomePage() {
           <h2 className="relative text-3xl md:text-5xl font-extrabold tracking-tight">
             Comece a usar agora
           </h2>
-          <p className="relative mt-4 text-lg text-[#a1a1a1]">
+          <p className="relative mt-4 text-lg text-[#71717a]">
             Crie sua conta gratuita e processe seu primeiro DANFE em menos de um
             minuto.
           </p>

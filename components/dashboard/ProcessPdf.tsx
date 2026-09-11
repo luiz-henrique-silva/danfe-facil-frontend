@@ -116,7 +116,7 @@ export default function ProcessPdf() {
     <div className="max-w-3xl mx-auto space-y-6">
       {/* Usage bar */}
       {usage && (
-        <div className="rounded-2xl border border-[#2a2a2a] bg-[#141414] p-5">
+        <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-5">
           <div className="flex items-center justify-between mb-3">
             <div>
               <p className="text-sm font-medium">
@@ -125,7 +125,7 @@ export default function ProcessPdf() {
                   {PLAN_NAMES[usage.plan] || usage.plan}
                 </span>
               </p>
-              <p className="text-xs text-[#666666] mt-0.5">
+              <p className="text-xs text-[#7d7d85] mt-0.5">
                 {isUnlimited
                   ? "Processamentos ilimitados neste mês"
                   : `${usage.processed_month} de ${usage.limit} processamentos neste mês`}
@@ -141,7 +141,7 @@ export default function ProcessPdf() {
             )}
           </div>
           {!isUnlimited && (
-            <div className="h-2 rounded-full bg-[#2a2a2a] overflow-hidden">
+            <div className="h-2 rounded-full bg-[#e4e4e7] overflow-hidden">
               <div
                 className={`h-full rounded-full transition-all ${
                   usedPercent > 80 ? "bg-red-500" : "bg-[#22c55e]"
@@ -158,7 +158,7 @@ export default function ProcessPdf() {
         className={`rounded-2xl border-2 border-dashed p-10 text-center transition-colors cursor-pointer ${
           dragging
             ? "border-[#22c55e] bg-[#22c55e]/5"
-            : "border-[#333333] bg-[#141414] hover:border-[#555555]"
+            : "border-[#d4d4d8] bg-[#ffffff] hover:border-[#b0b0b5]"
         }`}
         onDragOver={(e) => {
           e.preventDefault();
@@ -190,7 +190,7 @@ export default function ProcessPdf() {
         <p className="mt-4 font-medium">
           {file ? file.name : "Arraste seu PDF aqui"}
         </p>
-        <p className="mt-1 text-sm text-[#666666]">
+        <p className="mt-1 text-sm text-[#7d7d85]">
           {file
             ? `${(file.size / 1024).toFixed(0)} KB — clique para trocar`
             : "ou clique para selecionar o arquivo"}
@@ -201,7 +201,7 @@ export default function ProcessPdf() {
       </div>
 
       {/* Page size selector */}
-      <div className="rounded-2xl border border-[#2a2a2a] bg-[#141414] p-5">
+      <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-5">
         <p className="text-sm font-medium mb-3">Tamanho da página</p>
         <div className="grid gap-3">
           {PAGE_SIZES.map((s) => (
@@ -210,7 +210,7 @@ export default function ProcessPdf() {
               className={`flex items-start gap-3 rounded-xl border p-4 cursor-pointer transition-all ${
                 pageSize === s.value
                   ? "border-[#22c55e] bg-[#22c55e]/5"
-                  : "border-[#333333] hover:border-[#555555]"
+                  : "border-[#d4d4d8] hover:border-[#b0b0b5]"
               }`}
             >
               <input
@@ -223,7 +223,7 @@ export default function ProcessPdf() {
               />
               <div>
                 <p className="text-sm font-medium">{s.label}</p>
-                <p className="text-xs text-[#666666] mt-0.5">{s.detail}</p>
+                <p className="text-xs text-[#7d7d85] mt-0.5">{s.detail}</p>
               </div>
             </label>
           ))}
@@ -245,7 +245,7 @@ export default function ProcessPdf() {
             </div>
             <div>
               <p className="font-semibold">Processado com sucesso!</p>
-              <p className="text-xs text-[#a1a1a1]">
+              <p className="text-xs text-[#71717a]">
                 {result.pagesGenerated} páginas geradas a partir de{" "}
                 {result.pagesUsed} páginas · escala {(result.scale * 100).toFixed(0)}%
               </p>

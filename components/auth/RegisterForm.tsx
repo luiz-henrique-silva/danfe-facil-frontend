@@ -64,7 +64,7 @@ export default function RegisterForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Seu nome"
-          className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm placeholder:text-[#666666] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+          className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm placeholder:text-[#7d7d85] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
         />
       </div>
 
@@ -80,7 +80,7 @@ export default function RegisterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="voce@email.com"
-          className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm placeholder:text-[#666666] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+          className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm placeholder:text-[#7d7d85] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
         />
       </div>
 
@@ -96,7 +96,7 @@ export default function RegisterForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Mínimo 8 caracteres"
-          className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm placeholder:text-[#666666] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+          className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm placeholder:text-[#7d7d85] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
         />
       </div>
 
@@ -112,7 +112,7 @@ export default function RegisterForm() {
           value={confirm}
           onChange={(e) => setConfirm(e.target.value)}
           placeholder="Repita a senha"
-          className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm placeholder:text-[#666666] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+          className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm placeholder:text-[#7d7d85] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
         />
       </div>
 
@@ -130,7 +130,7 @@ export default function RegisterForm() {
         {loading ? "Criando conta..." : "Criar conta"}
       </button>
 
-      <p className="text-center text-sm text-[#a1a1a1]">
+      <p className="text-center text-sm text-[#71717a]">
         Já tem conta?{" "}
         <Link href="/login" className="text-[#22c55e] font-medium hover:underline">
           Entrar

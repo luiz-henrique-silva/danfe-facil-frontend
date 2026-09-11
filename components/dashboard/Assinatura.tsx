@@ -39,8 +39,8 @@ const STATUS_LABELS: Record<string, { label: string; color: string }> = {
   active: { label: "Ativa", color: "text-[#22c55e]" },
   trialing: { label: "Em avaliação", color: "text-yellow-400" },
   past_due: { label: "Pagamento pendente", color: "text-red-400" },
-  canceled: { label: "Cancelada", color: "text-[#666666]" },
-  free: { label: "Plano gratuito", color: "text-[#a1a1a1]" },
+  canceled: { label: "Cancelada", color: "text-[#7d7d85]" },
+  free: { label: "Plano gratuito", color: "text-[#71717a]" },
 };
 
 export default function Assinatura() {
@@ -112,7 +112,7 @@ export default function Assinatura() {
     return (
       <div className="max-w-3xl mx-auto space-y-4">
         {[0, 1, 2].map((i) => (
-          <div key={i} className="h-32 rounded-2xl bg-[#1a1a1a] animate-pulse" />
+          <div key={i} className="h-32 rounded-2xl bg-[#f2f2f3] animate-pulse" />
         ))}
       </div>
     );
@@ -124,17 +124,17 @@ export default function Assinatura() {
     <div className="max-w-3xl mx-auto space-y-6">
       <div>
         <h1 className="text-2xl font-bold mb-1">Assinatura</h1>
-        <p className="text-sm text-[#a1a1a1] mb-6">
+        <p className="text-sm text-[#71717a] mb-6">
           Gerencie seu plano e forma de pagamento.
         </p>
       </div>
 
       {/* Plano atual */}
       {sub && (
-        <div className="rounded-2xl border border-[#2a2a2a] bg-[#141414] p-6">
+        <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="text-sm text-[#a1a1a1]">Plano atual</p>
+              <p className="text-sm text-[#71717a]">Plano atual</p>
               <p className="text-2xl font-bold mt-0.5">
                 {PLAN_NAMES[sub.plan] || sub.plan}
               </p>
@@ -143,7 +143,7 @@ export default function Assinatura() {
               {statusInfo.label}
             </span>
           </div>
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-[#a1a1a1]">
+          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-[#71717a]">
             {sub.current_period_end && (
               <span>
                 Renova em:{" "}
@@ -180,18 +180,18 @@ export default function Assinatura() {
               className={`rounded-2xl border p-6 flex flex-col ${
                 sub?.plan === plan.id
                   ? "border-[#22c55e] bg-[#22c55e]/5"
-                  : "border-[#2a2a2a] bg-[#141414]"
+                  : "border-[#e4e4e7] bg-[#ffffff]"
               }`}
             >
               <h3 className="font-semibold text-lg">{plan.name}</h3>
               <div className="flex items-baseline gap-1 mt-2">
                 <span className="text-3xl font-bold">{plan.price}</span>
-                <span className="text-sm text-[#a1a1a1]">{plan.period}</span>
+                <span className="text-sm text-[#71717a]">{plan.period}</span>
               </div>
-              <p className="mt-2 text-sm text-[#a1a1a1]">{plan.desc}</p>
+              <p className="mt-2 text-sm text-[#71717a]">{plan.desc}</p>
               <ul className="mt-4 space-y-2 flex-1">
                 {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-[#a1a1a1]">
+                  <li key={f} className="flex items-start gap-2 text-sm text-[#71717a]">
                     <span className="text-[#22c55e]">✓</span>
                     {f}
                   </li>
@@ -217,14 +217,14 @@ export default function Assinatura() {
         })}
       </div>
 
-      <p className="text-xs text-[#666666] text-center">
+      <p className="text-xs text-[#7d7d85] text-center">
         Pagamento seguro via Stripe. Cartão de crédito com cobrança recorrente
         mensal ou PIX. Você pode cancelar a qualquer momento no portal de
         pagamento.
       </p>
 
-      <div className="rounded-2xl border border-[#2a2a2a] bg-[#141414] p-4 text-center">
-        <Link href="/" className="text-sm text-[#a1a1a1] hover:text-white">
+      <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-4 text-center">
+        <Link href="/" className="text-sm text-[#71717a] hover:text-black">
           ← Voltar para o início
         </Link>
       </div>

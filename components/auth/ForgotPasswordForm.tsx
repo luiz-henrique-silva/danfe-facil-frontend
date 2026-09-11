@@ -41,7 +41,7 @@ export default function ForgotPasswordForm() {
           ✉️
         </div>
         <h2 className="mt-4 text-xl font-semibold">Email enviado!</h2>
-        <p className="mt-2 text-sm text-[#a1a1a1]">
+        <p className="mt-2 text-sm text-[#71717a]">
           Se existir uma conta com <strong>{email}</strong>, você receberá um
           link para redefinir sua senha em instantes.
         </p>
@@ -69,7 +69,7 @@ export default function ForgotPasswordForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="voce@email.com"
-          className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm placeholder:text-[#666666] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+          className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm placeholder:text-[#7d7d85] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
         />
       </div>
 
@@ -87,7 +87,7 @@ export default function ForgotPasswordForm() {
         {loading ? "Enviando..." : "Enviar link de recuperação"}
       </button>
 
-      <p className="text-center text-sm text-[#a1a1a1]">
+      <p className="text-center text-sm text-[#71717a]">
         Lembrou a senha?{" "}
         <Link href="/login" className="text-[#22c55e] font-medium hover:underline">
           Fazer login

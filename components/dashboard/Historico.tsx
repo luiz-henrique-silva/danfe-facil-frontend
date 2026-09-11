@@ -52,29 +52,29 @@ export default function Historico() {
   return (
     <div>
       <h1 className="text-2xl font-bold mb-1">Histórico</h1>
-      <p className="text-sm text-[#a1a1a1] mb-6">
+      <p className="text-sm text-[#71717a] mb-6">
         Seus últimos 50 processamentos.
       </p>
 
       {loading ? (
         <div className="space-y-3">
           {[0, 1, 2, 3].map((i) => (
-            <div key={i} className="h-16 rounded-xl bg-[#1a1a1a] animate-pulse" />
+            <div key={i} className="h-16 rounded-xl bg-[#f2f2f3] animate-pulse" />
           ))}
         </div>
       ) : items.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-[#333333] p-12 text-center">
+        <div className="rounded-2xl border border-dashed border-[#d4d4d8] p-12 text-center">
           <div className="text-3xl mb-3">🗂️</div>
           <p className="font-medium">Nenhum processamento ainda</p>
-          <p className="mt-1 text-sm text-[#666666]">
+          <p className="mt-1 text-sm text-[#7d7d85]">
             Processe seu primeiro PDF na página inicial do dashboard.
           </p>
         </div>
       ) : (
-        <div className="overflow-x-auto rounded-2xl border border-[#2a2a2a]">
+        <div className="overflow-x-auto rounded-2xl border border-[#e4e4e7]">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[#2a2a2a] text-left text-xs uppercase tracking-wider text-[#666666]">
+              <tr className="border-b border-[#e4e4e7] text-left text-xs uppercase tracking-wider text-[#7d7d85]">
                 <th className="px-5 py-3 font-medium">Arquivo</th>
                 <th className="px-5 py-3 font-medium">Status</th>
                 <th className="px-5 py-3 font-medium">Tamanho</th>
@@ -83,7 +83,7 @@ export default function Historico() {
             </thead>
             <tbody>
               {items.map((item) => (
-                <tr key={item.id} className="border-b border-[#1f1f1f] last:border-0">
+                <tr key={item.id} className="border-b border-[#e4e4e7] last:border-0">
                   <td className="px-5 py-3 max-w-[280px] truncate">
                     <span className="inline-flex items-center gap-2">
                       <span>📄</span>
@@ -104,10 +104,10 @@ export default function Historico() {
                       </span>
                     )}
                   </td>
-                  <td className="px-5 py-3 text-[#a1a1a1]">
+                  <td className="px-5 py-3 text-[#71717a]">
                     {formatSize(item.result_size)}
                   </td>
-                  <td className="px-5 py-3 text-[#a1a1a1]">
+                  <td className="px-5 py-3 text-[#71717a]">
                     {formatDate(item.created_at)}
                   </td>
                 </tr>

@@ -97,7 +97,7 @@ export default function Perfil() {
     <div className="max-w-3xl mx-auto space-y-6">
       <div>
         <h1 className="text-2xl font-bold mb-1">Meu Perfil</h1>
-        <p className="text-sm text-[#a1a1a1] mb-6">
+        <p className="text-sm text-[#71717a] mb-6">
           Gerencie seus dados pessoais e altere sua senha.
         </p>
       </div>
@@ -105,7 +105,7 @@ export default function Perfil() {
       {/* Dados pessoais */}
       <form
         onSubmit={handleSaveProfile}
-        className="rounded-2xl border border-[#2a2a2a] bg-[#141414] p-6 space-y-5"
+        className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-6 space-y-5"
       >
         <h2 className="font-semibold">Dados pessoais</h2>
         <div>
@@ -117,7 +117,7 @@ export default function Perfil() {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+            className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
           />
         </div>
         <div>
@@ -129,7 +129,7 @@ export default function Perfil() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+            className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
           />
         </div>
 
@@ -156,7 +156,7 @@ export default function Perfil() {
       {/* Senha */}
       <form
         onSubmit={handleChangePassword}
-        className="rounded-2xl border border-[#2a2a2a] bg-[#141414] p-6 space-y-5"
+        className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-6 space-y-5"
       >
         <h2 className="font-semibold">Alterar senha</h2>
         <div>
@@ -169,7 +169,7 @@ export default function Perfil() {
             autoComplete="current-password"
             value={currentPassword}
             onChange={(e) => setCurrentPassword(e.target.value)}
-            className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+            className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
           />
         </div>
         <div>
@@ -182,7 +182,7 @@ export default function Perfil() {
             autoComplete="new-password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
-            className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+            className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
           />
         </div>
         <div>
@@ -195,7 +195,7 @@ export default function Perfil() {
             autoComplete="new-password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="w-full rounded-xl border border-[#333333] bg-[#1a1a1a] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
+            className="w-full rounded-xl border border-[#d4d4d8] bg-[#f2f2f3] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#22c55e]/50 transition"
           />
         </div>
 
