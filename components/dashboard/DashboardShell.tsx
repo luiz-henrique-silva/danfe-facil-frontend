@@ -142,8 +142,8 @@ export default function DashboardShell({ children }: { children: React.ReactNode
       )}
 
       {/* Main */}
-      <div className="flex-1 flex flex-col min-w-0 max-w-full overflow-x-clip">
-        <header className="relative z-40 flex items-center justify-between px-4 md:px-6 py-2.5 border-b border-[#e4e4e7] bg-white/80 backdrop-blur-xl">
+      <div className="flex-1 flex flex-col min-w-0 max-w-full overflow-x-hidden">
+        <header className="flex items-center justify-between px-4 md:px-6 py-2.5 border-b border-[#e4e4e7] bg-white/80 backdrop-blur-xl">
           <button
             className="md:hidden flex-shrink-0"
             onClick={() => setSidebarOpen(true)}

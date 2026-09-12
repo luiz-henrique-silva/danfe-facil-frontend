@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-[#e4e4e7] transition-all overflow-x-hidden max-w-[100vw] ${
+      className={`fixed top-0 inset-x-0 z-50 w-full bg-white/95 border-b border-[#e4e4e7] transition-all ${
         scrolled ? "py-2.5" : "py-4"
       }`}
     >
