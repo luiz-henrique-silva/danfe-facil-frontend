@@ -4,6 +4,7 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import { HeroCTA, BottomCTA } from "@/components/shared/LandingCTA";
 import LandingPlans from "@/components/shared/LandingPlans";
+import ImpactTable from "@/components/shared/ImpactTable";
 
 export const metadata: Metadata = {
   title: "UniDANFE — Unificador de etiquetas e DANFE do e-commerce",
@@ -286,6 +287,9 @@ export default function HomePage() {
 
       {/* PLANOS (somente se nao estiver logado) */}
       <LandingPlans />
+
+      {/* TABELA DE ECONOMIA */}
+      <ImpactTable />
 
       {/* FAQ */}
       <section id="faq" className="px-6 py-24">
