@@ -327,7 +327,7 @@ export default function Assinatura() {
                   ? "Plano atual"
                   : checkoutLoading === plan.id
                   ? "Abrindo pagamento..."
-                  : `Assinar ${plan.name}`}
+                  : `Assinar ${plan.name} com cartão`}
               </button>
               <button
                 onClick={() => startPix(plan.id, plan.name)}
