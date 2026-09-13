@@ -8,7 +8,7 @@ import ImpactTable from "@/components/shared/ImpactTable";
 
 export const metadata: Metadata = {
   title:
-    "UniDANFE — Unificador de etiquetas e DANFE | Mercado Livre, Shopee e e-commerce",
+    "UniDANFE — Unificador de etiquetas e DANFE simplificado | Mercado Livre, Shopee e e-commerce",
   description:
     "Combine a etiqueta de envio e o DANFE Simplificado do e-commerce em uma única página. Pronto para imprimir em térmica 100x150mm ou A4, direto no navegador.",
 };
