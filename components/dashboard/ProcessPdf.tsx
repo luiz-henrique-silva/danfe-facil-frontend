@@ -128,8 +128,8 @@ export default function ProcessPdf() {
               </p>
               <p className="text-xs text-[#7d7d85] mt-0.5">
                 {isUnlimited
-                  ? "Processamentos ilimitados neste mês"
-                  : `${usage.processed_month} de ${usage.limit} processamentos neste mês`}
+                  ? "Páginas ilimitadas neste mês"
+                  : `${usage.processed_month} de ${usage.limit} páginas geradas neste mês`}
               </p>
               <p className="text-[11px] text-[#22c55e] mt-1">
                 Erros de processamento não contam na cota.

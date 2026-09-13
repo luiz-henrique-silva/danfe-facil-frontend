@@ -8,7 +8,7 @@ const PLANS = [
     price: "R$ 0",
     period: "para sempre",
     description: "Para testar e enviar poucos pacotes.",
-    features: ["10 processamentos/mês", "Tamanho 100x150mm e A4", "Validação de integridade", "Suporte por email"],
+    features: ["10 páginas/mês", "Tamanho 100x150mm e A4", "Validação de integridade", "Suporte por email"],
     cta: "Começar grátis",
     href: "/cadastro",
     highlighted: false,

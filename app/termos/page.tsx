@@ -26,7 +26,7 @@ const SECTIONS = [
   },
   {
     title: "5. Limite de uso",
-    body: "Cada plano possui um limite mensal de processamentos. Ao atingir o limite, novos processamentos ficam indisponíveis até a renovação do ciclo ou o upgrade de plano. O uso em volume que caracterize abuso pode resultar em limitação ou suspensão.",
+    body: "Cada plano possui um limite mensal de páginas geradas. Ao atingir o limite, novos processamentos ficam indisponíveis até a renovação do ciclo ou o upgrade de plano. O uso em volume que caracterize abuso pode resultar em limitação ou suspensão.",
   },
   {
     title: "6. Cancelamento e reembolso",
