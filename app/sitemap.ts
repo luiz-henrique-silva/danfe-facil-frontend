@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${base}/como-baixar-xml-nf-mercado-livre`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${base}/unificar-etiqueta-shopee`,
       lastModified: now,
       changeFrequency: "weekly",

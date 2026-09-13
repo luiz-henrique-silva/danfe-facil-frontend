@@ -52,6 +52,10 @@ const FAQS = [
     q: "E se o processamento der erro?",
     a: "Processamentos com erro não entram na sua cota mensal e você não paga por eles. Garantia anti-erro incluída em todos os planos.",
   },
+  {
+    q: "Preciso do XML da NF para usar o UniDANFE?",
+    a: "Não. O UniDANFE usa o PDF do DANFE junto com a etiqueta de envio. Se você procura o XML da Nota Fiscal, veja nosso guia de como baixar o XML da NF no Mercado Livre.",
+  },
 ];
 
 export default function UnificarEtiquetaMercadoLivrePage() {

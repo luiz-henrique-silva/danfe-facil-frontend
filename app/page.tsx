@@ -361,6 +361,12 @@ export default function HomePage() {
             >
               Etiqueta Shopee + DANFE
             </Link>
+            <Link
+              href="/como-baixar-xml-nf-mercado-livre"
+              className="rounded-lg border border-[#d4d4d8] bg-white px-4 py-2 font-medium hover:border-[#22c55e] transition-colors"
+            >
+              Baixar XML da NF no ML
+            </Link>
           </div>
         </div>
       </section>
