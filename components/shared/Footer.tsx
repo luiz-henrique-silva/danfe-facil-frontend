@@ -83,6 +83,12 @@ export default function Footer() {
             <span className="text-sm text-[#7d7d85]">
               © 2026 Todos os direitos reservados.
             </span>
+            <a
+              href="mailto:danfeoficialpro@gmail.com"
+              className="text-sm text-[#7d7d85] hover:text-black transition-colors"
+            >
+              danfeoficialpro@gmail.com
+            </a>
           </div>
 
           <div className="flex items-center gap-3">
@@ -97,9 +103,9 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-6 text-sm text-[#7d7d85]">
-            <Link href="/" className="hover:text-black transition-colors">
-              Início
-            </Link>
+            <a href="mailto:danfeoficialpro@gmail.com" className="hover:text-black transition-colors">
+              Contato
+            </a>
             <Link href="/termos" className="hover:text-black transition-colors">
               Termos de Uso
             </Link>
