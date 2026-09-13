@@ -190,6 +190,16 @@ export default function HomePage() {
         },
       },
       {
+        "@type": "VideoObject",
+        name: "Como Unificar NF de envio | Imprimir etiqueta + DANFE em UMA SÓ | Nunca mais 2 impressões",
+        description:
+          "Tutorial passo a passo de como usar o UniDANFE para unificar a NF de envio: imprimir etiqueta + DANFE em UMA SÓ impressão, em térmica 100x150mm ou A4.",
+        thumbnailUrl: "https://i.ytimg.com/vi/xpvm0OxXykE/hqdefault.jpg",
+        uploadDate: "2026-09-13",
+        embedUrl: "https://www.youtube.com/embed/xpvm0OxXykE",
+        contentUrl: "https://www.youtube.com/watch?v=xpvm0OxXykE",
+      },
+      {
         "@type": "FAQPage",
         mainEntity: FAQS.map((f) => ({
           "@type": "Question",
@@ -240,6 +250,30 @@ export default function HomePage() {
                 <div className="text-sm text-[#7d7d85]">{s.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VÍDEO TUTORIAL */}
+      <section className="px-6 pt-12 pb-4 bg-[#ffffff]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#22c55e]">
+              Tutorial em vídeo
+            </span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-bold">
+              Veja como usar em 2 minutos
+            </h2>
+          </div>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-[#e4e4e7] shadow-xl shadow-black/5">
+            <iframe
+              src="https://www.youtube.com/embed/xpvm0OxXykE"
+              title="Como Unificar NF de envio | Imprimir etiqueta + DANFE em UMA SÓ | Nunca mais 2 impressões"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
           </div>
         </div>
       </section>
