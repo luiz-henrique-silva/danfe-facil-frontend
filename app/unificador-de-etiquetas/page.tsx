@@ -15,6 +15,22 @@ const FAQS = [
     a: "É uma ferramenta que junta a etiqueta de envio do e-commerce com o DANFE em uma única página, pronta para impressão em térmica 100x150mm ou A4.",
   },
   {
+    q: "Como juntar duas etiquetas em uma?",
+    a: "Envie os PDFs das etiquetas no UniDANFE. O sistema unifica duas (ou mais) etiquetas de envio e também as páginas do DANFE em uma única folha, seja etiqueta térmica 10x15 ou A4.",
+  },
+  {
+    q: "Como imprimir duas páginas em uma etiqueta?",
+    a: "Quando o DANFE ocupa duas páginas, ou você tem etiqueta + DANFE, o UniDANFE compacta tudo e imprime as duas páginas em uma única etiqueta 10x15 ou folha A4.",
+  },
+  {
+    q: "Consigo imprimir o DANFE para impressora térmica?",
+    a: "Sim. O UniDANFE gera o DANFE no tamanho da sua impressora térmica — formato etiqueta 10x15 (100x150mm) — ou em A4, conforme sua escolha.",
+  },
+  {
+    q: "Como economizar papel imprimindo etiquetas?",
+    a: "Unificando etiqueta + DANFE em uma única impressão, cada envio consome uma etiqueta em vez de duas. Quem imprime etiquetas todos os dias reduz o consumo de papel e etiqueta térmica pela metade.",
+  },
+  {
     q: "Quais e-commerces são compatíveis?",
     a: "O UniDANFE combina etiquetas de Mercado Livre, Shopee e outros e-commerces que geram a etiqueta em PDF, sempre respeitando o DANFE emitido pelo próprio e-commerce.",
   },
@@ -90,6 +106,16 @@ export default function UnificadorDeEtiquetasPage() {
             </Link>
           ))}
         </div>
+
+        <h2 className="mt-12 text-2xl font-bold">Juntar duas etiquetas em uma: como funciona?</h2>
+        <p className="mt-4 text-[#71717a] leading-relaxed">
+          O termo mais comum é "juntar duas páginas em uma": no envio, são duas
+          folhas por pedido — a etiqueta de envio e uma ou duas páginas do
+          DANFE. O UniDANFE unifica tudo e imprime essas folhas em uma única
+          etiqueta (10x15 térmica) ou uma folha A4. Cada envio passa a gastar
+          uma impressão em vez de duas, e assim você economiza papel imprimindo
+          etiquetas todos os dias.
+        </p>
 
         <h2 className="mt-12 text-2xl font-bold">Por que usar um unificador de etiquetas?</h2>
         <ul className="mt-6 space-y-3 text-[#71717a] text-sm">

@@ -128,6 +128,22 @@ const FAQS = [
     a: "Sim. Envie o PDF da etiqueta do Mercado Livre e o UniDANFE une ela ao DANFE Simplificado em uma única página, pronta para impressão em térmica ou A4.",
   },
   {
+    q: "Como imprimir duas páginas do DANFE em uma etiqueta só?",
+    a: "O UniDANFE junta as duas páginas do DANFE — ou uma etiqueta e uma página de DANFE — em um único arquivo. Você imprime todas as folhas desnecessárias de uma vez na mesma etiqueta.",
+  },
+  {
+    q: "Posso usar o DANFE em impressora térmica 100x150mm?",
+    a: "Sim. O UniDANFE gera o DANFE ajustado para impressão térmica no formato 100x150mm (10x15), além de A4. É a configuração ideal para etiqueta de envio 10x15.",
+  },
+  {
+    q: "Como economizar papel imprimindo etiquetas?",
+    a: "Ao unificar etiqueta e DANFE em uma única página, você corta pela metade as impressões e o consumo de papel e etiquetas térmicas — economia direta em cada envio.",
+  },
+  {
+    q: "O que é unificar etiqueta do Mercado Livre?",
+    a: "É juntar a etiqueta de envio do Mercado Livre (formato 10x15) com o DANFE Simplificado em uma só página, evitando imprimir e colar duas folhas separadas por pedido.",
+  },
+  {
     q: "Funciona com etiquetas da Shopee?",
     a: "Sim. O UniDANFE combina etiquetas de envio de e-commerce em geral — incluindo Shopee — com o DANFE em uma só folha, sem instalação.",
   },
@@ -321,14 +337,12 @@ export default function HomePage() {
 
       {/* GUIA: JUNTAR ETIQUETA E DANFE */}
       <section className="px-6 py-10 bg-[#fafafa] border-b border-[#e4e4e7]">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="font-semibold">Junta etiqueta + DANFE em uma página só</p>
-            <p className="text-sm text-[#71717a] mt-1">
-              Veja o guia de unificação para cada plataforma.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3 text-sm">
+        <div className="max-w-6xl mx-auto">
+          <p className="font-semibold">Junta etiqueta + DANFE em uma página só</p>
+          <p className="text-sm text-[#71717a] mt-1">
+            Veja como unificar etiqueta do Mercado Livre com o DANFE 10x15, juntar duas páginas do DANFE em uma etiqueta térmica, e mais.
+          </p>
+          <div className="flex flex-wrap gap-3 text-sm mt-4">
             <Link
               href="/unificador-de-etiquetas"
               className="rounded-lg border border-[#d4d4d8] bg-white px-4 py-2 font-medium hover:border-[#22c55e] transition-colors"
@@ -339,13 +353,13 @@ export default function HomePage() {
               href="/unificar-etiqueta-mercado-livre"
               className="rounded-lg border border-[#d4d4d8] bg-white px-4 py-2 font-medium hover:border-[#22c55e] transition-colors"
             >
-              Etiqueta Mercado Livre
+              Unificar etiqueta Mercado Livre + DANFE
             </Link>
             <Link
               href="/unificar-etiqueta-shopee"
               className="rounded-lg border border-[#d4d4d8] bg-white px-4 py-2 font-medium hover:border-[#22c55e] transition-colors"
             >
-              Etiqueta Shopee
+              Etiqueta Shopee + DANFE
             </Link>
           </div>
         </div>

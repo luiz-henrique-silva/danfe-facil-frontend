@@ -19,6 +19,14 @@ const FAQS = [
     a: "Sim. O UniDANFE suporta processamento em lote: envie vários PDFs e imprima etiqueta + DANFE juntos, otimizando sua impressora.",
   },
   {
+    q: "Funciona com o DANFE para impressora térmica?",
+    a: "Sim. O UniDANFE gera o resultado no formato 10x15 (100x150mm) para impressora térmica ou em A4 — basta escolher no upload do PDF.",
+  },
+  {
+    q: "Como juntar duas páginas do DANFE em uma etiqueta?",
+    a: "Envie o PDF com as duas páginas e o UniDANFE junta tudo — etiqueta + páginas do DANFE — em uma única etiqueta 10x15 ou folha A4.",
+  },
+  {
     q: "Preciso instalar algum programa?",
     a: "Não. O processo é 100% online, direto no navegador, de qualquer computador.",
   },
@@ -54,6 +62,17 @@ export default function UnificarEtiquetaShopeePage() {
           O UniDANFE junta a etiqueta de envio da Shopee e o DANFE de
           e-commerce em uma única página. Um só PDF, pronto para imprimir em
           térmica 100x150mm ou A4 — sem instalar nada.
+        </p>
+
+        <h2 className="mt-12 text-2xl font-bold">
+          Juntar duas etiquetas em uma só impressão
+        </h2>
+        <p className="mt-4 text-[#71717a] leading-relaxed">
+          Por envio você recebe pelo menos duas páginas: a etiqueta de envio e
+          o DANFE. O UniDANFE imprime essas duas páginas em uma única etiqueta
+          10x15 (térmica) ou em uma folha A4. Em vez de duas impressões por
+          pedido, você processa tudo em uma — o que reduz o consumo de papel e
+          etiqueta térmica pela metade no seu dia a dia.
         </p>
 
         <div className="mt-10 rounded-2xl border border-[#e4e4e7] p-6">

@@ -33,8 +33,16 @@ const FAQS = [
     a: "Envie o PDF da etiqueta de envio do Mercado Livre no UniDANFE. O sistema combina a etiqueta com o DANFE Simplificado em uma única página, pronta para imprimir em térmica ou A4.",
   },
   {
+    q: "Juntar etiqueta do Mercado Livre e DANFE em uma única impressão?",
+    a: "Sim. O UniDANFE janta a etiqueta de envio 10x15 do Mercado Livre com o DANFE Simplificado em uma única etiqueta, sem precisar de dois cliques ou duas folhas.",
+  },
+  {
     q: "Funciona com o DANFE Simplificado do Mercado Livre?",
     a: "Sim. O UniDANFE foi feito justamente para unir a etiqueta de envio e o DANFE Simplificado emitidos pelo e-commerce em uma única folha.",
+  },
+  {
+    q: "Unificar DANFE com etiqueta é o mesmo que juntar duas páginas?",
+    a: "Sim. O UniDANFE unifica todas as páginas do DANFE com a etiqueta em uma única folha, tanto em formato 10x15 (térmica) quanto A4.",
   },
   {
     q: "Preciso instalar algum programa?",
@@ -77,6 +85,22 @@ export default function UnificarEtiquetaMercadoLivrePage() {
           do Mercado Livre e o DANFE Simplificado em uma única página. Você
           baixa um só PDF e economiza papel, tempo e dinheiro na impressão —
           em térmica 100x150mm ou A4.
+        </p>
+
+        <h2 className="mt-12 text-2xl font-bold">
+          Unificar etiqueta do Mercado Livre + DANFE 10x15
+        </h2>
+        <p className="mt-4 text-[#71717a] leading-relaxed">
+          A etiqueta de envio do Mercado Livre já sai no formato 10x15 (100x150mm),
+          exatamente o tamanho da etiqueta térmica. O UniDANFE junta essa etiqueta
+          com o DANFE nesse mesmo padrão, sem cortes. Se a sua impressora usa
+          etiqueta 10x15, a impressão sai pronta para colar — duas páginas do
+          DANFE, quando houver, também entram na mesma etiqueta.
+        </p>
+        <p className="mt-4 text-[#71717a] leading-relaxed">
+          Resultado: em vez de imprimir e colar duas coisas separadas por envio,
+          você imprime uma única etiqueta com tudo dentro, cortando o consumo de
+          papel e etiqueta térmica pela metade.
         </p>
 
         <h2 className="mt-12 text-2xl font-bold">Como funciona</h2>
