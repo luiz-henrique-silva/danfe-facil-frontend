@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://danfepro.com.br"),
   title: {
-    default: "UniDANFE — Unificador de etiquetas e DANFE do e-commerce",
+    default:
+      "UniDANFE — Unificador de etiquetas e DANFE | Mercado Livre, Shopee e e-commerce",
     template: "%s | UniDANFE",
   },
   description:
@@ -68,7 +69,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://danfepro.com.br",
     siteName: "UniDANFE",
-    title: "UniDANFE — Unificador de etiquetas e DANFE do e-commerce",
+    title: "UniDANFE — Unificador de etiquetas e DANFE | Mercado Livre, Shopee e e-commerce",
     description:
       "Combine etiqueta de envio e DANFE Simplificado em uma única página, pronta para impressão em térmica ou A4.",
   },
