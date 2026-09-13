@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "unificador de danfe",
     "juntar etiquetas",
     "juntar duas etiquetas",
+    "juntar 2 etiquetas danfe",
     "unificar duas etiquetas",
     "juntar duas etiquetas em uma",
     "juntar duas páginas em uma",

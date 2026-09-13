@@ -116,6 +116,12 @@ export default function UnificadorDeEtiquetasPage() {
           uma impressão em vez de duas, e assim você economiza papel imprimindo
           etiquetas todos os dias.
         </p>
+        <p className="mt-4 text-[#71717a] leading-relaxed">
+          Também dá para <strong>juntar 2 etiquetas DANFE</strong> (quando a NF
+          sai com duas páginas) ou combinar etiqueta de envio + DANFE no mesmo
+          arquivo. O UniDANFE remodela as páginas em uma única folha, pronta
+          para a sua impressora térmica ou A4.
+        </p>
 
         <h2 className="mt-12 text-2xl font-bold">Por que usar um unificador de etiquetas?</h2>
         <ul className="mt-6 space-y-3 text-[#71717a] text-sm">
