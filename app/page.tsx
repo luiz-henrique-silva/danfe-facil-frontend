@@ -196,7 +196,7 @@ export default function HomePage() {
         description:
           "Tutorial passo a passo de como usar o UniDANFE para unificar a NF de envio: imprimir etiqueta + DANFE em UMA SÓ impressão, em térmica 100x150mm ou A4.",
         thumbnailUrl: "https://i.ytimg.com/vi/xpvm0OxXykE/hqdefault.jpg",
-        uploadDate: "2026-09-13",
+        uploadDate: "2026-09-14T00:00:00-03:00",
         embedUrl: "https://www.youtube.com/embed/xpvm0OxXykE",
         contentUrl: "https://www.youtube.com/watch?v=xpvm0OxXykE",
       },
