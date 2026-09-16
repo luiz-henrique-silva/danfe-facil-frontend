@@ -96,8 +96,8 @@ const FEATURES = [
         <line x1="9" y1="15" x2="15" y2="15" />
       </svg>
     ),
-    title: "Converter PDF para etiqueta 10x15",
-    desc: "Converte qualquer PDF — DANFE, comprovante, documento — em etiqueta térmica 10x15, otimizando sua impressora.",
+    title: "Converter PDF A4 para etiqueta 10x15",
+    desc: "Converte PDF A4 — DANFE, comprovante, documento — em etiqueta térmica 10x15, otimizando sua impressora.",
   },
 ];
 
@@ -173,8 +173,8 @@ const FAQS = [
     a: "Sim. Você cancela em um clique na área de assinatura, direto no portal de pagamento, sem burocracia.",
   },
   {
-    q: "O DANFEpro converte qualquer PDF para etiqueta 10x15?",
-    a: "Sim. Na dashboard, selecione 'Converter PDF para etiqueta 10x15' — cada página do arquivo vira uma etiqueta térmica 100x150mm, pronta para impressora. Ideal para DANFEs, comprovantes ou qualquer documento que você queira em etiqueta.",
+    q: "O DANFEpro converte PDF A4 para etiqueta 10x15?",
+    a: "Sim. Na dashboard, selecione 'Converter PDF para etiqueta 10x15' — cada página do arquivo A4 vira uma etiqueta térmica 100x150mm, pronta para impressora.",
   },
   {
     q: "Meus dados ficam seguros?",

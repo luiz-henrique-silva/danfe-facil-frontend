@@ -11,8 +11,8 @@ const MODES = [
   },
   {
     id: "convert",
-    label: "Converter PDF para etiqueta 10x15",
-    desc: "Converte qualquer página do PDF em etiqueta térmica 10x15.",
+    label: "Converter PDF A4 para etiqueta 10x15",
+    desc: "Converte qualquer página A4 do PDF em etiqueta térmica 10x15.",
   },
 ] as const;
 
