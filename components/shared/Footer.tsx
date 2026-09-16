@@ -79,7 +79,7 @@ export default function Footer() {
                 <polyline points="14 2 14 8 20 8" />
               </svg>
             </div>
-            <span className="font-semibold">UniDANFE</span>
+            <span className="font-semibold">DANFE&nbsp;pro</span>
             <span className="text-sm text-[#7d7d85]">
               © 2026 Todos os direitos reservados.
             </span>

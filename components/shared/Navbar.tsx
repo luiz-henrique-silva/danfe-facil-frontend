@@ -34,7 +34,7 @@ export default function Navbar() {
               <polyline points="14 2 14 8 20 8" />
             </svg>
           </div>
-          <span className="font-bold text-lg">DANFE&nbsp;Fácil</span>
+          <span className="font-bold text-lg">DANFE&nbsp;pro</span>
         </Link>
 
         {/* Desktop links */}

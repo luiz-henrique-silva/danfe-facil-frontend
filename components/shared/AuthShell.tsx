@@ -19,7 +19,7 @@ export default function AuthShell({
           <div className="w-9 h-9 rounded-lg bg-[#22c55e] flex items-center justify-center text-lg">
             📄
           </div>
-          <span className="font-bold text-lg">UniDANFE</span>
+          <span className="font-bold text-lg">DANFE&nbsp;pro</span>
         </Link>
       </header>
 

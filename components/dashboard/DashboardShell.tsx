@@ -86,7 +86,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
                 <polyline points="14 2 14 8 20 8" />
               </svg>
             </div>
-            <span className="font-bold">UniDANFE</span>
+            <span className="font-bold">DANFE&nbsp;pro</span>
           </Link>
         </div>
 
