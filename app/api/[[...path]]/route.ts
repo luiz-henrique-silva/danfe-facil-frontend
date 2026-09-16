@@ -52,9 +52,11 @@ export async function proxyHandler(
   if (accessToken) headers.set("authorization", `Bearer ${accessToken}`);
 
   const isGetOrHead = req.method === "GET" || req.method === "HEAD";
+  const isOAuthCallback = OAUTH_CALLBACK_PATHS.includes(pathname);
 
   let backendRes: Response | undefined;
-  for (let attempt = 0; attempt < 3; attempt++) {
+  const maxAttempts = isOAuthCallback ? 1 : 3;
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
     try {
       backendRes = await fetch(target, {
         method: req.method,
@@ -81,6 +83,10 @@ export async function proxyHandler(
       JSON.stringify({ detail: "Serviço temporariamente indisponível. Tente novamente." }),
       { status: 503, headers: { "content-type": "application/json" } }
     );
+  }
+
+  if (isOAuthCallback && !backendRes.ok) {
+    return NextResponse.redirect(new URL("/login?error=google", req.url));
   }
 
   const responseBody = await backendRes.arrayBuffer();

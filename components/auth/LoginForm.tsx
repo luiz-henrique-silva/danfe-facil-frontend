@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/lib/auth-context";
 
@@ -12,7 +12,14 @@ export default function LoginForm() {
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { refreshUser } = useAuth();
+
+  useEffect(() => {
+    if (searchParams.get("error") === "google") {
+      setError("Não foi possível entrar com o Google. Clique novamente para tentar.");
+    }
+  }, [searchParams]);
 
   async function handleGoogle() {
     setError("");
