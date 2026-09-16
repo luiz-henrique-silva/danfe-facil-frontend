@@ -53,12 +53,35 @@ export async function proxyHandler(
 
   const isGetOrHead = req.method === "GET" || req.method === "HEAD";
 
-  const backendRes = await fetch(target, {
-    method: req.method,
-    headers,
-    body: isGetOrHead ? undefined : await req.arrayBuffer(),
-    cache: "no-store",
-  });
+  let backendRes: Response | undefined;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      backendRes = await fetch(target, {
+        method: req.method,
+        headers,
+        body: isGetOrHead ? undefined : await req.arrayBuffer(),
+        cache: "no-store",
+        signal: AbortSignal.timeout(45000),
+      });
+    } catch {
+      // rede falhou (ex.: backend reativando no Render) — tenta de novo
+      backendRes = undefined;
+    }
+    if (!backendRes) {
+      if (attempt < 2) await new Promise((r) => setTimeout(r, 1000 * (attempt + 1)));
+      continue;
+    }
+    if (backendRes.status < 500 || !isGetOrHead) break;
+    // 5xx: pode ser cold start — uma tentativa a mais
+    if (attempt < 2) await new Promise((r) => setTimeout(r, 1000 * (attempt + 1)));
+  }
+
+  if (!backendRes) {
+    return new NextResponse(
+      JSON.stringify({ detail: "Serviço temporariamente indisponível. Tente novamente." }),
+      { status: 503, headers: { "content-type": "application/json" } }
+    );
+  }
 
   const responseBody = await backendRes.arrayBuffer();
   const response = new NextResponse(responseBody, {
