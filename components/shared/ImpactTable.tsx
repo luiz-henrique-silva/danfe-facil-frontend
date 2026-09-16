@@ -63,8 +63,8 @@ export default function ImpactTable() {
             Quanto você economiza unificando etiqueta + DANFE?
           </h2>
           <p className="mt-3 text-[#71717a]">
-            Sem o UniDANFE, cada envio gera duas etiquetas (transporte + DANFE).
-            Com o UniDANFE, um só. Veja a economia anual estimada.
+            Sem o DANFEpro, cada envio gera duas etiquetas (transporte + DANFE).
+            Com o DANFEpro, um só. Veja a economia anual estimada.
           </p>
         </div>
 

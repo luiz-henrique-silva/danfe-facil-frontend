@@ -17,7 +17,7 @@ const STEPS = [
   },
   {
     num: "2",
-    title: "Envie no UniDANFE",
+    title: "Envie no DANFEpro",
     desc: "Suba o arquivo pelo navegador, sem instalar nada. Escolha térmica 100x150mm, altura exata ou A4.",
   },
   {
@@ -30,19 +30,19 @@ const STEPS = [
 const FAQS = [
   {
     q: "Como unificar a etiqueta do Mercado Livre com o DANFE?",
-    a: "Envie o PDF da etiqueta de envio do Mercado Livre no UniDANFE. O sistema combina a etiqueta com o DANFE Simplificado em uma única página, pronta para imprimir em térmica ou A4.",
+    a: "Envie o PDF da etiqueta de envio do Mercado Livre no DANFEpro. O sistema combina a etiqueta com o DANFE Simplificado em uma única página, pronta para imprimir em térmica ou A4.",
   },
   {
     q: "Juntar etiqueta do Mercado Livre e DANFE em uma única impressão?",
-    a: "Sim. O UniDANFE janta a etiqueta de envio 10x15 do Mercado Livre com o DANFE Simplificado em uma única etiqueta, sem precisar de dois cliques ou duas folhas.",
+    a: "Sim. O DANFEpro janta a etiqueta de envio 10x15 do Mercado Livre com o DANFE Simplificado em uma única etiqueta, sem precisar de dois cliques ou duas folhas.",
   },
   {
     q: "Funciona com o DANFE Simplificado do Mercado Livre?",
-    a: "Sim. O UniDANFE foi feito justamente para unir a etiqueta de envio e o DANFE Simplificado emitidos pelo e-commerce em uma única folha.",
+    a: "Sim. O DANFEpro foi feito justamente para unir a etiqueta de envio e o DANFE Simplificado emitidos pelo e-commerce em uma única folha.",
   },
   {
     q: "Unificar DANFE com etiqueta é o mesmo que juntar duas páginas?",
-    a: "Sim. O UniDANFE unifica todas as páginas do DANFE com a etiqueta em uma única folha, tanto em formato 10x15 (térmica) quanto A4.",
+    a: "Sim. O DANFEpro unifica todas as páginas do DANFE com a etiqueta em uma única folha, tanto em formato 10x15 (térmica) quanto A4.",
   },
   {
     q: "Preciso instalar algum programa?",
@@ -53,8 +53,8 @@ const FAQS = [
     a: "Processamentos com erro não entram na sua cota mensal e você não paga por eles. Garantia anti-erro incluída em todos os planos.",
   },
   {
-    q: "Preciso do XML da NF para usar o UniDANFE?",
-    a: "Não. O UniDANFE usa o PDF do DANFE junto com a etiqueta de envio. Se você procura o XML da Nota Fiscal, veja nosso guia de como baixar o XML da NF no Mercado Livre.",
+    q: "Preciso do XML da NF para usar o DANFEpro?",
+    a: "Não. O DANFEpro usa o PDF do DANFE junto com a etiqueta de envio. Se você procura o XML da Nota Fiscal, veja nosso guia de como baixar o XML da NF no Mercado Livre.",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function UnificarEtiquetaMercadoLivrePage() {
           <span className="text-gradient-accent">DANFE Simplificado</span>
         </h1>
         <p className="mt-6 text-lg text-[#71717a] leading-relaxed">
-          O UniDANFE é o unificador de etiquetas que junta a etiqueta de envio
+          O DANFEpro é o unificador de etiquetas que junta a etiqueta de envio
           do Mercado Livre e o DANFE Simplificado em uma única página. Você
           baixa um só PDF e economiza papel, tempo e dinheiro na impressão —
           em térmica 100x150mm ou A4.
@@ -96,7 +96,7 @@ export default function UnificarEtiquetaMercadoLivrePage() {
         </h2>
         <p className="mt-4 text-[#71717a] leading-relaxed">
           A etiqueta de envio do Mercado Livre já sai no formato 10x15 (100x150mm),
-          exatamente o tamanho da etiqueta térmica. O UniDANFE junta essa etiqueta
+          exatamente o tamanho da etiqueta térmica. O DANFEpro junta essa etiqueta
           com o DANFE nesse mesmo padrão, sem cortes. Se a sua impressora usa
           etiqueta 10x15, a impressão sai pronta para colar — duas páginas do
           DANFE, quando houver, também entram na mesma etiqueta.

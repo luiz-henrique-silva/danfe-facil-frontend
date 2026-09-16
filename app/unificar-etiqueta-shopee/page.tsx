@@ -12,19 +12,19 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Como unificar a etiqueta da Shopee com o DANFE?",
-    a: "Envie o PDF da etiqueta de envio da Shopee no UniDANFE. O sistema combina a etiqueta com o DANFE em uma única página, pronta para imprimir em térmica ou A4.",
+    a: "Envie o PDF da etiqueta de envio da Shopee no DANFEpro. O sistema combina a etiqueta com o DANFE em uma única página, pronta para imprimir em térmica ou A4.",
   },
   {
     q: "Consigo juntar várias etiquetas da Shopee em uma impressão?",
-    a: "Sim. O UniDANFE suporta processamento em lote: envie vários PDFs e imprima etiqueta + DANFE juntos, otimizando sua impressora.",
+    a: "Sim. O DANFEpro suporta processamento em lote: envie vários PDFs e imprima etiqueta + DANFE juntos, otimizando sua impressora.",
   },
   {
     q: "Funciona com o DANFE para impressora térmica?",
-    a: "Sim. O UniDANFE gera o resultado no formato 10x15 (100x150mm) para impressora térmica ou em A4 — basta escolher no upload do PDF.",
+    a: "Sim. O DANFEpro gera o resultado no formato 10x15 (100x150mm) para impressora térmica ou em A4 — basta escolher no upload do PDF.",
   },
   {
     q: "Como juntar duas páginas do DANFE em uma etiqueta?",
-    a: "Envie o PDF com as duas páginas e o UniDANFE junta tudo — etiqueta + páginas do DANFE — em uma única etiqueta 10x15 ou folha A4.",
+    a: "Envie o PDF com as duas páginas e o DANFEpro junta tudo — etiqueta + páginas do DANFE — em uma única etiqueta 10x15 ou folha A4.",
   },
   {
     q: "Preciso instalar algum programa?",
@@ -59,7 +59,7 @@ export default function UnificarEtiquetaShopeePage() {
           <span className="text-gradient-accent">DANFE</span>
         </h1>
         <p className="mt-6 text-lg text-[#71717a] leading-relaxed">
-          O UniDANFE junta a etiqueta de envio da Shopee e o DANFE de
+          O DANFEpro junta a etiqueta de envio da Shopee e o DANFE de
           e-commerce em uma única página. Um só PDF, pronto para imprimir em
           térmica 100x150mm ou A4 — sem instalar nada.
         </p>
@@ -69,7 +69,7 @@ export default function UnificarEtiquetaShopeePage() {
         </h2>
         <p className="mt-4 text-[#71717a] leading-relaxed">
           Por envio você recebe pelo menos duas páginas: a etiqueta de envio e
-          o DANFE. O UniDANFE imprime essas duas páginas em uma única etiqueta
+          o DANFE. O DANFEpro imprime essas duas páginas em uma única etiqueta
           10x15 (térmica) ou em uma folha A4. Em vez de duas impressões por
           pedido, você processa tudo em uma — o que reduz o consumo de papel e
           etiqueta térmica pela metade no seu dia a dia.
@@ -81,7 +81,7 @@ export default function UnificarEtiquetaShopeePage() {
           </h2>
           <ol className="mt-4 space-y-3 list-decimal list-inside text-sm text-[#71717a]">
             <li>Baixe o PDF da etiqueta de envio no painel da sua loja Shopee.</li>
-            <li>Suba o arquivo no UniDANFE pelo navegador.</li>
+            <li>Suba o arquivo no DANFEpro pelo navegador.</li>
             <li>Baixe o PDF com etiqueta + DANFE unificados e imprima em uma página só.</li>
           </ol>
         </div>

@@ -16,15 +16,15 @@ const FAQS = [
   },
   {
     q: "Como juntar duas etiquetas em uma?",
-    a: "Envie os PDFs das etiquetas no UniDANFE. O sistema unifica duas (ou mais) etiquetas de envio e também as páginas do DANFE em uma única folha, seja etiqueta térmica 10x15 ou A4.",
+    a: "Envie os PDFs das etiquetas no DANFEpro. O sistema unifica duas (ou mais) etiquetas de envio e também as páginas do DANFE em uma única folha, seja etiqueta térmica 10x15 ou A4.",
   },
   {
     q: "Como imprimir duas páginas em uma etiqueta?",
-    a: "Quando o DANFE ocupa duas páginas, ou você tem etiqueta + DANFE, o UniDANFE compacta tudo e imprime as duas páginas em uma única etiqueta 10x15 ou folha A4.",
+    a: "Quando o DANFE ocupa duas páginas, ou você tem etiqueta + DANFE, o DANFEpro compacta tudo e imprime as duas páginas em uma única etiqueta 10x15 ou folha A4.",
   },
   {
     q: "Consigo imprimir o DANFE para impressora térmica?",
-    a: "Sim. O UniDANFE gera o DANFE no tamanho da sua impressora térmica — formato etiqueta 10x15 (100x150mm) — ou em A4, conforme sua escolha.",
+    a: "Sim. O DANFEpro gera o DANFE no tamanho da sua impressora térmica — formato etiqueta 10x15 (100x150mm) — ou em A4, conforme sua escolha.",
   },
   {
     q: "Como economizar papel imprimindo etiquetas?",
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     q: "Quais e-commerces são compatíveis?",
-    a: "O UniDANFE combina etiquetas de Mercado Livre, Shopee e outros e-commerces que geram a etiqueta em PDF, sempre respeitando o DANFE emitido pelo próprio e-commerce.",
+    a: "O DANFEpro combina etiquetas de Mercado Livre, Shopee e outros e-commerces que geram a etiqueta em PDF, sempre respeitando o DANFE emitido pelo próprio e-commerce.",
   },
   {
     q: "Cobram se der erro no processamento?",
@@ -71,7 +71,7 @@ export default function UnificadorDeEtiquetasPage() {
           <span className="text-gradient-accent">etiqueta + DANFE em 1 página</span>
         </h1>
         <p className="mt-6 text-lg text-[#71717a] leading-relaxed">
-          O UniDANFE é a ferramenta que junta a etiqueta de envio do seu
+          O DANFEpro é a ferramenta que junta a etiqueta de envio do seu
           e-commerce com o DANFE em uma única página. Imprima em térmica
           100x150mm ou A4, economize papel e agilize o despacho — tudo direto
           no navegador, sem instalação.
@@ -92,7 +92,7 @@ export default function UnificadorDeEtiquetasPage() {
             },
             {
               title: "Outros e-commerces",
-              desc: "Se a etiqueta sai em PDF, o UniDANFE une ao DANFE.",
+              desc: "Se a etiqueta sai em PDF, o DANFEpro une ao DANFE.",
               href: "/",
             },
           ].map((c) => (
@@ -111,7 +111,7 @@ export default function UnificadorDeEtiquetasPage() {
         <p className="mt-4 text-[#71717a] leading-relaxed">
           O termo mais comum é "juntar duas páginas em uma": no envio, são duas
           folhas por pedido — a etiqueta de envio e uma ou duas páginas do
-          DANFE. O UniDANFE unifica tudo e imprime essas folhas em uma única
+          DANFE. O DANFEpro unifica tudo e imprime essas folhas em uma única
           etiqueta (10x15 térmica) ou uma folha A4. Cada envio passa a gastar
           uma impressão em vez de duas, e assim você economiza papel imprimindo
           etiquetas todos os dias.
@@ -119,7 +119,7 @@ export default function UnificadorDeEtiquetasPage() {
         <p className="mt-4 text-[#71717a] leading-relaxed">
           Também dá para <strong>juntar 2 etiquetas DANFE</strong> (quando a NF
           sai com duas páginas) ou combinar etiqueta de envio + DANFE no mesmo
-          arquivo. O UniDANFE remodela as páginas em uma única folha, pronta
+          arquivo. O DANFEpro remodela as páginas em uma única folha, pronta
           para a sua impressora térmica ou A4.
         </p>
 

@@ -1,7 +1,7 @@
 import DashboardShell from "@/components/dashboard/DashboardShell";
 
 export const metadata = {
-  title: "Dashboard — UniDANFE",
+  title: "Dashboard — DANFEpro",
 };
 
 export default function DashboardLayout({

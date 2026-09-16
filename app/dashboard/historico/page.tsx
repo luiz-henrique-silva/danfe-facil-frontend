@@ -1,7 +1,7 @@
 import Historico from "@/components/dashboard/Historico";
 
 export const metadata = {
-  title: "Histórico — UniDANFE",
+  title: "Histórico — DANFEpro",
 };
 
 export default function HistoricoPage() {

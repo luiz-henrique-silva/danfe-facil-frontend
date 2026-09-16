@@ -3,7 +3,7 @@ import AuthShell from "@/components/shared/AuthShell";
 import ResetPasswordForm from "@/components/auth/ResetPasswordForm";
 
 export const metadata: Metadata = {
-  title: "Redefinir senha — UniDANFE",
+  title: "Redefinir senha — DANFEpro",
 };
 
 export default async function ResetPasswordPage({

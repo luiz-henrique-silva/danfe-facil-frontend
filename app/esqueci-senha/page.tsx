@@ -3,7 +3,7 @@ import AuthShell from "@/components/shared/AuthShell";
 import ForgotPasswordForm from "@/components/auth/ForgotPasswordForm";
 
 export const metadata: Metadata = {
-  title: "Esqueci minha senha — UniDANFE",
+  title: "Esqueci minha senha — DANFEpro",
 };
 
 export default function ForgotPasswordPage() {

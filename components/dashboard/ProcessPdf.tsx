@@ -21,7 +21,7 @@ const PLAN_NAMES: Record<string, string> = {
   business: "Business",
 };
 
-export default function ProcessPdf() {
+export default function ProcessPdf({ mode = "unify" }: { mode?: "unify" | "convert" }) {
   const [usage, setUsage] = useState<Usage | null>(null);
   const [dragging, setDragging] = useState(false);
   const [file, setFile] = useState<File | null>(null);
@@ -70,7 +70,8 @@ export default function ProcessPdf() {
     try {
       const form = new FormData();
       form.append("file", file);
-      const res = await fetch(`/api/pdf/process?page_size=${pageSize}`, {
+      const size = mode === "convert" ? "100x150" : pageSize;
+      const res = await fetch(`/api/pdf/process?page_size=${size}`, {
         method: "POST",
         body: form,
       });
@@ -195,7 +196,7 @@ export default function ProcessPdf() {
           </svg>
         </div>
         <p className="mt-4 font-medium">
-          {file ? file.name : "Arraste seu PDF aqui"}
+          {file ? file.name : mode === "convert" ? "Arraste seu PDF aqui" : "Arraste seu PDF aqui"}
         </p>
         <p className="mt-1 text-sm text-[#7d7d85]">
           {file
@@ -207,35 +208,45 @@ export default function ProcessPdf() {
         )}
       </div>
 
-      {/* Page size selector */}
-      <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-5">
-        <p className="text-sm font-medium mb-3">Tamanho da página</p>
-        <div className="grid gap-3">
-          {PAGE_SIZES.map((s) => (
-            <label
-              key={s.value}
-              className={`flex items-start gap-3 rounded-xl border p-4 cursor-pointer transition-all ${
-                pageSize === s.value
-                  ? "border-[#22c55e] bg-[#22c55e]/5"
-                  : "border-[#d4d4d8] hover:border-[#b0b0b5]"
-              }`}
-            >
-              <input
-                type="radio"
-                name="pageSize"
-                value={s.value}
-                checked={pageSize === s.value}
-                onChange={() => setPageSize(s.value)}
-                className="mt-1 accent-[#22c55e]"
-              />
-              <div>
-                <p className="text-sm font-medium">{s.label}</p>
-                <p className="text-xs text-[#7d7d85] mt-0.5">{s.detail}</p>
-              </div>
-            </label>
-          ))}
+      {/* Page size selector (só no modo unificar) */}
+      {mode !== "convert" && (
+        <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-5">
+          <p className="text-sm font-medium mb-3">Tamanho da página</p>
+          <div className="grid gap-3">
+            {PAGE_SIZES.map((s) => (
+              <label
+                key={s.value}
+                className={`flex items-start gap-3 rounded-xl border p-4 cursor-pointer transition-all ${
+                  pageSize === s.value
+                    ? "border-[#22c55e] bg-[#22c55e]/5"
+                    : "border-[#d4d4d8] hover:border-[#b0b0b5]"
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="pageSize"
+                  value={s.value}
+                  checked={pageSize === s.value}
+                  onChange={() => setPageSize(s.value)}
+                  className="mt-1 accent-[#22c55e]"
+                />
+                <div>
+                  <p className="text-sm font-medium">{s.label}</p>
+                  <p className="text-xs text-[#7d7d85] mt-0.5">{s.detail}</p>
+                </div>
+              </label>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+
+      {mode === "convert" && (
+        <div className="rounded-2xl border border-[#e4e4e7] bg-[#ffffff] p-5 text-sm text-[#71717a]">
+          Cada página do seu PDF será convertida para o formato de etiqueta térmica
+          <span className="font-medium text-black"> 100x150mm (10x15)</span>, pronta para imprimir
+          em impressora de etiquetas.
+        </div>
+      )}
 
       {error && (
         <div className="rounded-xl border border-red-500/30 bg-red-500/10 px-5 py-4 text-sm text-red-400">
@@ -291,7 +302,13 @@ export default function ProcessPdf() {
         disabled={!file || processing}
         className="w-full rounded-xl bg-[#22c55e] py-4 text-base font-semibold text-black hover:bg-[#16a34a] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
       >
-        {processing ? "Processando..." : file ? "Processar PDF" : "Selecione um PDF para começar"}
+        {processing
+          ? "Processando..."
+          : file
+          ? mode === "convert"
+            ? "Converter para etiqueta 10x15"
+            : "Processar PDF"
+          : "Selecione um PDF para começar"}
       </button>
     </div>
   );

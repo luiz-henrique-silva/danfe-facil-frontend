@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://danfepro.com.br"),
   title: {
     default:
-      "UniDANFE — Unificador de etiquetas e DANFE simplificado | Mercado Livre, Shopee e e-commerce",
-    template: "%s | UniDANFE",
+      "DANFEpro — Unificador de etiquetas e DANFE simplificado | Mercado Livre, Shopee e e-commerce",
+    template: "%s | DANFEpro",
   },
   description:
     "Unifique a etiqueta de envio e o DANFE Simplificado do e-commerce em uma única página. Imprima em térmica 100x150mm ou A4, direto no navegador.",
@@ -68,14 +68,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://danfepro.com.br",
-    siteName: "UniDANFE",
-    title: "UniDANFE — Unificador de etiquetas e DANFE simplificado | Mercado Livre, Shopee e e-commerce",
+    siteName: "DANFEpro",
+    title: "DANFEpro — Unificador de etiquetas e DANFE simplificado | Mercado Livre, Shopee e e-commerce",
     description:
       "Combine etiqueta de envio e DANFE Simplificado em uma única página, pronta para impressão em térmica ou A4.",
   },
   twitter: {
     card: "summary",
-    title: "UniDANFE — etiqueta e DANFE em uma página só",
+    title: "DANFEpro — etiqueta e DANFE em uma página só",
     description:
       "Combine etiqueta de envio e DANFE Simplificado em uma única página, pronta para impressão.",
   },

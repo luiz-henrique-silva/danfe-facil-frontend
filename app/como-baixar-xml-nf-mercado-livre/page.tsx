@@ -51,7 +51,7 @@ const FAQS = [
   },
   {
     q: "Preciso do XML para imprimir a etiqueta + DANFE?",
-    a: "Não. O UniDANFE unifica a etiqueta de envio com o DANFE (PDF) em uma única página, para impressão em térmica 10x15 ou A4. O XML você usa para fins fiscais — são coisas diferentes.",
+    a: "Não. O DANFEpro unifica a etiqueta de envio com o DANFE (PDF) em uma única página, para impressão em térmica 10x15 ou A4. O XML você usa para fins fiscais — são coisas diferentes.",
   },
 ];
 

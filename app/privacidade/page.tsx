@@ -3,8 +3,8 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade — UniDANFE",
-  description: "Como o UniDANFE coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
+  title: "Política de Privacidade — DANFEpro",
+  description: "Como o DANFEpro coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.",
 };
 
 const SECTIONS = [

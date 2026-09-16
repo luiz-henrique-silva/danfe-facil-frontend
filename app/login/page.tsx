@@ -3,7 +3,7 @@ import AuthShell from "@/components/shared/AuthShell";
 import LoginForm from "@/components/auth/LoginForm";
 
 export const metadata: Metadata = {
-  title: "Entrar — UniDANFE",
+  title: "Entrar — DANFEpro",
 };
 
 export default function LoginPage() {
