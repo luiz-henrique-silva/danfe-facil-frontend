@@ -44,15 +44,38 @@ export async function proxyHandler(
   const target = `${BACKEND_URL}/api/${pathname}${url.search}`;
 
   const headers = new Headers();
-  headers.set("content-type", req.headers.get("content-type") || "application/json");
-  const accept = req.headers.get("accept");
-  if (accept) headers.set("accept", accept);
+
+  // Repassa os headers do cliente para o backend, exceto os "hop-by-hop" e os
+  // que o proxy trata de forma própria. Isso é essencial para webhooks (ex.:
+  // Stripe envia o header `stripe-signature`, que precisa chegar ao backend
+  // intacto para validar a assinatura).
+  const SKIP_REQUEST_HEADERS = new Set([
+    "host",
+    "connection",
+    "content-length",
+    "accept-encoding",
+    "cookie",
+    "transfer-encoding",
+    "keep-alive",
+    "upgrade",
+    "proxy-connection",
+    "te",
+    "trailer",
+  ]);
+  req.headers.forEach((value, key) => {
+    if (!SKIP_REQUEST_HEADERS.has(key.toLowerCase())) headers.set(key, value);
+  });
+
+  if (!headers.has("content-type")) headers.set("content-type", "application/json");
 
   const accessToken = req.cookies.get("df_access")?.value;
   if (accessToken) headers.set("authorization", `Bearer ${accessToken}`);
 
   const isGetOrHead = req.method === "GET" || req.method === "HEAD";
   const isOAuthCallback = OAUTH_CALLBACK_PATHS.includes(pathname);
+
+  // Lê o corpo uma única vez: reler em cada tentativa lança "body already used".
+  const requestBody = isGetOrHead ? undefined : await req.arrayBuffer();
 
   let backendRes: Response | undefined;
   const maxAttempts = isOAuthCallback ? 1 : 3;
@@ -61,7 +84,7 @@ export async function proxyHandler(
       backendRes = await fetch(target, {
         method: req.method,
         headers,
-        body: isGetOrHead ? undefined : await req.arrayBuffer(),
+        body: requestBody,
         cache: "no-store",
         signal: AbortSignal.timeout(45000),
       });
