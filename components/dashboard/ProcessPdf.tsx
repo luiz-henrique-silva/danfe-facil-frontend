@@ -71,7 +71,8 @@ export default function ProcessPdf({ mode = "unify" }: { mode?: "unify" | "conve
       const form = new FormData();
       form.append("file", file);
       const size = mode === "convert" ? "100x150" : pageSize;
-      const res = await fetch(`/api/pdf/process?page_size=${size}`, {
+      const modeParam = mode === "convert" ? "&mode=convert" : "";
+      const res = await fetch(`/api/pdf/process?page_size=${size}${modeParam}`, {
         method: "POST",
         body: form,
       });
